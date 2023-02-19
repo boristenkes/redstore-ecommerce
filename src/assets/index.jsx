@@ -43,6 +43,8 @@ import product12 from './product-12.jpg';
 
 import Logo from './Logo';
 
+import hero from './hero.png';
+
 export const categories = {
 	category1: category1,
 	category2: category2,
@@ -96,4 +98,4 @@ export const allProducts = {
 	product12: product12,
 };
 
-export { exclusive, Logo };
+export { exclusive, Logo, hero };

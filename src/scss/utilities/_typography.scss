@@ -1,15 +1,24 @@
 @use '../abstracts/' as *;
 
 .head-text {
-	// font-size: clamp();
+	font-size: clamp(1.5rem, 5vw, 3.125rem);
 	font-family: var(--ff-heading);
-	font-weight: var(--fw-semibold);
-	text-align: center;
+	font-weight: var(--fw-bold);
+
+	@include mq('tablet-small', max) {
+		text-align: center;
+	}
 }
 
 .body-text {
+	font-size: 1rem;
 	font-family: var(--ff-body);
 	width: min(var(--max-width, 60ch), (100% - 2rem));
+	color: var(--clr-neutral-600);
+
+	@include mq('tablet-small', max) {
+		text-align: center;
+	}
 }
 
 .section-title {

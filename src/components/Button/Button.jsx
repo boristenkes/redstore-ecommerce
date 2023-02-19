@@ -1,0 +1,21 @@
+import styled from 'styled-components';
+
+const Button = styled.a`
+	font-family: var(--ff-button);
+	background: var(--clr-primary-500);
+	color: var(--clr-neutral-100);
+	padding: 0.5rem 1.875rem;
+	border-radius: 100vmax;
+	display: block;
+	width: fit-content;
+
+	&:hover {
+		background: var(--clr-primary-700);
+	}
+
+	@media only screen and (max-width: 640px) {
+		margin-inline: auto;
+	}
+`;
+
+export default Button;

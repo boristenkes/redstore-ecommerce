@@ -1,0 +1,16 @@
+@use '../../scss/abstracts/' as *;
+
+.header {
+	background-image: radial-gradient(#fff, #ffd6d6);
+	height: 100vh;
+	height: 100dvh;
+	display: grid;
+	place-items: center;
+
+	&-wrapper {
+		div {
+			@include separate-children(1rem);
+		}
+		align-items: center;
+	}
+}
