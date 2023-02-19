@@ -5,6 +5,7 @@ import {
 	FeaturedProducts,
 	Header,
 	LatestProducts,
+	Testimonials,
 } from '../../containers';
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
 			<FeaturedProducts />
 			<LatestProducts />
 			<CTA />
+			<Testimonials />
 		</>
 	);
 }
