@@ -1,6 +1,7 @@
 import './Home.scss';
 import {
 	Categories,
+	CTA,
 	FeaturedProducts,
 	Header,
 	LatestProducts,
@@ -13,6 +14,7 @@ export default function Home() {
 			<Categories />
 			<FeaturedProducts />
 			<LatestProducts />
+			<CTA />
 		</>
 	);
 }
