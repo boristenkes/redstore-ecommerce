@@ -3,7 +3,7 @@
 .product {
 	@include separate-children(0.5rem);
 	flex: 1;
-	min-width: 200px;
+	min-width: 250px;
 	max-width: 25%;
 	transition: transform 0.25s ease-in-out;
 	margin-bottom: 1.5rem;
@@ -13,9 +13,9 @@
 	}
 
 	&-image {
-		height: 100%;
-		width: 100%;
-		object-fit: cover;
+		height: 350px;
+		width: 250px;
+		object-fit: contain;
 	}
 
 	&-name {
@@ -26,6 +26,7 @@
 		text-overflow: ellipsis;
 		overflow: hidden;
 		white-space: nowrap;
+		max-width: 250px;
 	}
 
 	&-rating {
