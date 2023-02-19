@@ -1,0 +1,115 @@
+@use './breakpoints' as *;
+
+@mixin mq($query, $width-type: min) {
+	@if map_has_key($breakpoints, $query) {
+		$query: map_get($breakpoints, $query);
+		@if ($width-type == min) {
+			$query: $query + 1px;
+		}
+		@media only screen and (#{$width-type}-width: $query) {
+			@content;
+		}
+	} @else if $query == 'landscape' or $query == 'portrait' {
+		@media only screen and (orientation: $query) {
+			@content;
+		}
+	} @else if $query == 'dark' or $query == 'light' {
+		@media (prefers-color-scheme: $query) {
+			@content;
+		}
+	} @else {
+		@error "Unknown query: #{$query}";
+	}
+}
+
+@mixin flex($justify: null, $align: null, $direction: null, $wrap: null) {
+	display: flex;
+
+	@if $justify != null {
+		justify-content: $justify;
+	}
+	@if $align != null {
+		align-items: $align;
+	}
+	@if $direction != null {
+		flex-direction: $direction;
+	}
+	@if $wrap != null {
+		flex-wrap: $wrap;
+	}
+}
+
+@mixin separate-children($space: 1rem, $direction: 'vertical') {
+	& > *:not(:last-child) {
+		@if $direction == 'vertical' {
+			margin-bottom: $space;
+		} @else if $direction == 'horizontal' {
+			margin-right: $space;
+		} @else if $direction == 'both' {
+			margin-bottom: $space;
+			margin-right: $space;
+		}
+	}
+}
+
+@mixin responsive-grid($width: 300px, $gap: 1rem) {
+	display: grid;
+	gap: $gap;
+	grid-template-columns: repeat(auto-fit, minmax($width, 1fr));
+}
+
+@mixin pseudo($pseudo: before, $content: '', $position: absolute) {
+	@if $position == absolute {
+		position: relative;
+	}
+
+	&::#{$pseudo} {
+		content: $content;
+		position: #{$position};
+		@content;
+	}
+}
+
+@mixin triangle($direction: 'right', $size: 20px, $color: #555) {
+	width: 0;
+	height: 0;
+
+	@if $direction == 'up' {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-bottom: $size solid $color;
+	} @else if $direction == 'right' {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-left: $size solid $color;
+	} @else if $direction == 'down' {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-top: $size solid $color;
+	} @else if $direction == 'left' {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-right: $size solid $color;
+	}
+}
+
+@mixin bg-img(
+	$image-src,
+	$size: cover,
+	$position: center,
+	$repeat: no-repeat,
+	$attachment: null,
+	$gradient: null
+) {
+	@if $gradient != null {
+		background-image: $gradient, url(#{$image-src});
+	} @else {
+		background-image: url(#{$image-src});
+	}
+	background-size: $size;
+	background-position: $position;
+	background-repeat: $repeat;
+	@if $attachment != null {
+		background-attachment: $attachment;
+	}
+}

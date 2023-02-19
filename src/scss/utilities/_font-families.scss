@@ -1,0 +1,7 @@
+@use '../abstracts/' as *;
+
+@each $label, $family in $fontFamilies {
+	.ff-#{$label} {
+		font-family: #{$family} !important;
+	}
+}

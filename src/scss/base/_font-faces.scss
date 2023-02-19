@@ -1,0 +1,20 @@
+@use '../abstracts/' as *;
+
+$list: 'black', 'bold', 'extrabold', 'extralight', 'italic', 'light', 'medium',
+	'mediumitalic', 'regular', 'semibold', 'semibolditalic', 'thin';
+
+@each $item in $list {
+	@font-face {
+		font-family: 'Poppins';
+		src: url('../../assets/fonts/poppins-#{item}') format('woff2'),
+			url('../../assets/fonts/poppins-#{item}') format('woff');
+
+		@if map-has-key($fontWeights, $item) {
+			font-weight: map-get($fontWeights, $item);
+		} @else if $item == 'mediumitalic' {
+			font-weight: map-get($fontWeights, medium);
+		} @else if $item == 'semibolditalic' {
+			font-weight: map-get($fontWeights, semibold);
+		}
+	}
+}

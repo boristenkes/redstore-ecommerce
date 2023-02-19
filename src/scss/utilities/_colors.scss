@@ -1,0 +1,12 @@
+@use '../abstracts/' as *;
+
+@each $color, $listOfShades in $colors {
+	@each $label, $shade in $listOfShades {
+		.text-#{$color}-#{$label} {
+			color: #{$shade} !important;
+		}
+		.bg-#{$color}-#{$label} {
+			background-color: #{$shade} !important;
+		}
+	}
+}

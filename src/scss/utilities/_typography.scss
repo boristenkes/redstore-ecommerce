@@ -1,0 +1,27 @@
+@use '../abstracts/' as *;
+
+.head-text {
+	// font-size: clamp();
+	font-family: var(--ff-heading);
+	font-weight: var(--fw-semibold);
+	text-align: center;
+}
+
+.body-text {
+	font-family: var(--ff-body);
+	width: min(var(--max-width, 60ch), (100% - 2rem));
+}
+
+.section-title {
+	// font-size: clamp();
+	font-family: var(--ff-heading);
+	font-weight: var(--fw-semibold);
+	text-align: center;
+}
+
+.section-subtitle {
+	font-family: var(--ff-subheading);
+	// font-size: clamp();
+	width: min(var(--max-width, 60ch), (100% - 2rem));
+	text-align: center;
+}

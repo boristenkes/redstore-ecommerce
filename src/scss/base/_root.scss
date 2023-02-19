@@ -1,0 +1,15 @@
+@use '../abstracts/' as *;
+
+:root {
+	@each $color, $listOfShades in $colors {
+		@each $label, $shade in $listOfShades {
+			--clr-#{$color}-#{$label}: #{$shade};
+		}
+	}
+	@each $label, $family in $fontFamilies {
+		--ff-#{$label}: #{$family};
+	}
+	@each $label, $weight in $fontWeights {
+		--fw-#{$label}: #{$weight};
+	}
+}
