@@ -41,6 +41,8 @@ import product10 from './product-10.jpg';
 import product11 from './product-11.jpg';
 import product12 from './product-12.jpg';
 
+import Logo from './Logo';
+
 export const categories = {
 	category1: category1,
 	category2: category2,
@@ -94,4 +96,4 @@ export const allProducts = {
 	product12: product12,
 };
 
-export { exclusive };
+export { exclusive, Logo };

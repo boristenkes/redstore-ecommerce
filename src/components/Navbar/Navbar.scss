@@ -1,0 +1,69 @@
+@use '../../scss/abstracts/' as *;
+
+.navbar {
+	@include flex(space-between, center);
+	font-family: var(--ff-nav);
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+
+	&-logo {
+		width: 130px;
+		height: fit-content;
+	}
+
+	&-nav {
+		@include flex(center, center);
+		gap: 1.5rem;
+
+		&-list {
+			&:not(.mobile) {
+				@include flex(center, center);
+			}
+			gap: 1.5rem;
+
+			&.mobile {
+				@include flex($direction: column);
+				position: fixed;
+				top: 0;
+				right: 0;
+				height: 100vh;
+				background: var(--clr-neutral-600);
+				padding: 7.5rem 5rem;
+				transform: translateX(calc(100% + 2rem));
+				transition: transform, box-shadow, 0.75s ease;
+
+				&.active {
+					transform: translateX(2rem);
+					box-shadow: rgba(#111, 0.5) 0 0 0 10000px;
+				}
+
+				a {
+					color: var(--clr-neutral-100);
+				}
+			}
+		}
+	}
+
+	button {
+		background: transparent;
+		border: none;
+	}
+
+	a {
+		color: var(--clr-neutral-500);
+		&:hover {
+			color: var(--clr-primary-500);
+			fill: var(--clr-primary-500);
+		}
+		&:last-child {
+			width: 30px;
+			height: 30px;
+
+			a {
+				font-size: 2rem;
+			}
+		}
+	}
+}

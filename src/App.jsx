@@ -16,13 +16,13 @@ export default function App() {
 		<>
 			<Navbar />
 			<Routes>
-				<Route to='/' element={<Home />} />
-				<Route to='/products' element={<Products />} />
-				<Route to='/about' element={<About />} />
-				<Route to='/contact' element={<Contact />} />
-				<Route to='/product/:id' element={<ProductReview />} />
-				<Route to='/account' element={<Account />} />
-				<Route to='/cart' element={<CartPage />} />
+				<Route path='/' element={<Home />} />
+				<Route path='/products' element={<Products />} />
+				<Route path='/about' element={<About />} />
+				<Route path='/contact' element={<Contact />} />
+				<Route path='/product/:id' element={<ProductReview />} />
+				<Route path='/account' element={<Account />} />
+				<Route path='/cart' element={<CartPage />} />
 			</Routes>
 			<Footer />
 		</>

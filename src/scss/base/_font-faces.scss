@@ -1,20 +1,95 @@
-@use '../abstracts/' as *;
+@font-face {
+	font-family: 'poppinsblack';
+	src: url('../../assets/fonts/poppins-black.woff2') format('woff2'),
+		url('../../assets/fonts/poppins-black.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
 
-$list: 'black', 'bold', 'extrabold', 'extralight', 'italic', 'light', 'medium',
-	'mediumitalic', 'regular', 'semibold', 'semibolditalic', 'thin';
+@font-face {
+	font-family: 'poppinsbold';
+	src: url('../../assets/fonts/poppins-bold.woff2') format('woff2'),
+		url('../../assets/fonts/poppins-bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
 
-@each $item in $list {
-	@font-face {
-		font-family: 'Poppins';
-		src: url('../../assets/fonts/poppins-#{item}') format('woff2'),
-			url('../../assets/fonts/poppins-#{item}') format('woff');
+@font-face {
+	font-family: 'poppinsextrabold';
+	src: url('../../assets/fonts/poppins-extrabold.woff2') format('woff2'),
+		url('../../assets/fonts/poppins-extrabold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
 
-		@if map-has-key($fontWeights, $item) {
-			font-weight: map-get($fontWeights, $item);
-		} @else if $item == 'mediumitalic' {
-			font-weight: map-get($fontWeights, medium);
-		} @else if $item == 'semibolditalic' {
-			font-weight: map-get($fontWeights, semibold);
-		}
-	}
+@font-face {
+	font-family: 'poppinsextralight';
+	src: url('../../assets/fonts/poppins-extralight.woff2') format('woff2'),
+		url('../../assets/fonts/poppins-extralight.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'poppinsitalic';
+	src: url('../../assets/fonts/poppins-italic.woff2') format('woff2'),
+		url('../../assets/fonts/poppins-italic.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'poppinslight';
+	src: url('../../assets/fonts/poppins-light.woff2') format('woff2'),
+		url('../../assets/fonts/poppins-light.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'poppinsmedium';
+	src: url('../../assets/fonts/poppins-medium.woff2') format('woff2'),
+		url('../../assets/fonts/poppins-medium.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'poppinsmedium_italic';
+	src: url('../../assets/fonts/poppins-mediumitalic.woff2') format('woff2'),
+		url('../../assets/fonts/poppins-mediumitalic.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'poppinsregular';
+	src: url('../../assets/fonts/poppins-regular.woff2') format('woff2'),
+		url('../../assets/fonts/poppins-regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'poppinssemibold';
+	src: url('../../assets/fonts/poppins-semibold.woff2') format('woff2'),
+		url('../../assets/fonts/poppins-semibold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'poppinssemibold_italic';
+	src: url('../../assets/fonts/poppins-semibolditalic.woff2') format('woff2'),
+		url('../../assets/fonts/poppins-semibolditalic.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'poppinsthin';
+	src: url('../../assets/fonts/poppins-thin.woff2') format('woff2'),
+		url('../../assets/fonts/poppins-thin.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
