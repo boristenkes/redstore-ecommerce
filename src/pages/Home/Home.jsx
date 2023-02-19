@@ -1,10 +1,11 @@
 import './Home.scss';
-import { Header } from '../../containers';
+import { Categories, Header } from '../../containers';
 
 export default function Home() {
 	return (
 		<>
 			<Header />
+			<Categories />
 		</>
 	);
 }

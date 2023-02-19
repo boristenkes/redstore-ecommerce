@@ -2,15 +2,18 @@
 	"categories": [
 		{
 			"id": "934f49c0-42a3-48b9-a69e-a634b6ce5421",
-			"image": "https://redstore-ecommerce-design.netlify.app/images/category-1.jpg"
+			"image": "https://redstore-ecommerce-design.netlify.app/images/category-1.jpg",
+			"category": "Red Shoes"
 		},
 		{
 			"id": "6d437c53-48f1-4214-983f-16ec88010bce",
-			"image": "https://redstore-ecommerce-design.netlify.app/images/category-2.jpg"
+			"image": "https://redstore-ecommerce-design.netlify.app/images/category-2.jpg",
+			"category": "Adidas Shoes"
 		},
 		{
 			"id": "a7eb1892-bd28-43e2-a473-6a904f6e7b43",
-			"image": "https://redstore-ecommerce-design.netlify.app/images/category-3.jpg"
+			"image": "https://redstore-ecommerce-design.netlify.app/images/category-3.jpg",
+			"category": "Adidas"
 		}
 	],
 	"products": [

@@ -1,0 +1,24 @@
+@use '../../scss/abstracts/' as *;
+
+.categories {
+	@include flex(center, center, $wrap: wrap);
+	gap: 2rem;
+	padding-inline: 5rem;
+
+	&-category {
+		overflow: hidden;
+		height: 300px;
+		aspect-ratio: 1;
+
+		&-image {
+			transition: transform 0.5s ease-in-out;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+}
