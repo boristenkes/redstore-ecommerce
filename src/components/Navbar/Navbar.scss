@@ -2,6 +2,7 @@
 
 .navbar {
 	@include flex(space-between, center);
+	--container-width: 1250px;
 	font-family: var(--ff-nav);
 	position: fixed;
 	top: 0;

@@ -22,10 +22,25 @@
 }
 
 .section-title {
-	// font-size: clamp();
+	font-size: clamp(1.5rem, 5vw, 1.75rem);
+	color: var(--clr-neutral-600);
 	font-family: var(--ff-heading);
-	font-weight: var(--fw-semibold);
+	font-weight: var(--fw-bold);
 	text-align: center;
+	width: fit-content;
+	margin-inline: auto;
+	margin-bottom: 4rem;
+
+	&::after {
+		content: '';
+		display: block;
+		margin-top: 0.5rem;
+		height: 5px;
+		width: 35%;
+		border-radius: 100vmax;
+		background: var(--clr-primary-500);
+		margin-inline: auto;
+	}
 }
 
 .section-subtitle {

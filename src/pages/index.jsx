@@ -4,6 +4,6 @@ import CartPage from './CartPage/CartPage';
 import Contact from './Contact/Contact';
 import Home from './Home/Home';
 import ProductReview from './ProductReview/ProductReview';
-import Products from './Products/Products';
+import ProductsPage from './ProductsPage/ProductsPage';
 
-export { About, Account, CartPage, Contact, Home, ProductReview, Products };
+export { About, Account, CartPage, Contact, Home, ProductReview, ProductsPage };

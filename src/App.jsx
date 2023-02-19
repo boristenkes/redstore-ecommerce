@@ -5,7 +5,7 @@ import {
 	Contact,
 	Home,
 	ProductReview,
-	Products,
+	ProductsPage,
 } from './pages';
 import { Navbar } from './components';
 import { Footer } from './containers';
@@ -17,7 +17,7 @@ export default function App() {
 			<Navbar />
 			<Routes>
 				<Route path='/' element={<Home />} />
-				<Route path='/products' element={<Products />} />
+				<Route path='/products' element={<ProductsPage />} />
 				<Route path='/about' element={<About />} />
 				<Route path='/contact' element={<Contact />} />
 				<Route path='/product/:id' element={<ProductReview />} />

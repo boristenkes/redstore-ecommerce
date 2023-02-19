@@ -1,0 +1,46 @@
+@use '../../scss/abstracts/' as *;
+
+.product {
+	@include separate-children(0.5rem);
+	flex: 1;
+	min-width: 200px;
+	max-width: 25%;
+	transition: transform 0.25s ease-in-out;
+	margin-bottom: 1.5rem;
+
+	&:hover {
+		transform: translateY(-0.5rem);
+	}
+
+	&-image {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&-name {
+		font-size: 1.25rem;
+		font-family: var(--ff-primary);
+		font-weight: var(--fw-medium);
+		color: var(--clr-neutral-600);
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+
+	&-rating {
+		display: flex;
+		gap: 0.25rem;
+		color: var(--clr-primary-500);
+	}
+
+	&-price {
+		font-family: var(--ff-primary);
+		font-weight: var(--fw-regular);
+		color: var(--clr-neutral-600);
+
+		&::after {
+			content: '.00';
+		}
+	}
+}

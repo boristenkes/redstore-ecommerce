@@ -6,6 +6,7 @@ import FeaturedProducts from './FeaturedProducts/FeaturedProducts';
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
 import LatestProducts from './LatestProducts/LatestProducts';
+import Products from './Products/Products';
 import RelatedProducts from './RelatedProducts/RelatedProducts';
 import Testimonials from './Testimonials/Testimonials';
 
@@ -18,6 +19,7 @@ export {
 	Footer,
 	Header,
 	LatestProducts,
+	Products,
 	RelatedProducts,
 	Testimonials,
 };

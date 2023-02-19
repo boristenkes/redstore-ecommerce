@@ -3,7 +3,6 @@
 .categories {
 	@include flex(center, center, $wrap: wrap);
 	gap: 2rem;
-	padding-inline: 5rem;
 
 	&-category {
 		overflow: hidden;
