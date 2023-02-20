@@ -44,6 +44,10 @@ import product12 from './product-12.jpg';
 import Logo from './Logo';
 
 import hero from './hero.png';
+import playStore from './play-store.png';
+import appStore from './app-store.png';
+
+// TODO: Convert all images to webp
 
 export const categories = {
 	category1: category1,
@@ -98,4 +102,4 @@ export const allProducts = {
 	product12: product12,
 };
 
-export { exclusive, Logo, hero };
+export { exclusive, Logo, hero, playStore, appStore };

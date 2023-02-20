@@ -1,6 +1,7 @@
 export default function Logo({
 	fillMain = 'var(--clr-neutral-900)',
 	fillText = 'var(--clr-primary-500)',
+	...props
 }) {
 	return (
 		<svg
@@ -10,6 +11,7 @@ export default function Logo({
 			height='57.000000pt'
 			viewBox='0 0 300.000000 87.000000'
 			preserveAspectRatio='xMidYMid meet'
+			{...props}
 		>
 			<g
 				transform='translate(0.000000,87.000000) scale(0.100000,-0.100000)'

@@ -1,0 +1,66 @@
+@use '../../scss/abstracts/' as *;
+
+.footer {
+	background-color: #000;
+	color: var(--clr-neutral-100);
+
+	&-wrapper {
+		@include flex(center, center, $wrap: wrap);
+		@include mq('tablet-wide', max) {
+			text-align: center;
+		}
+		> * {
+			flex: 1;
+			min-width: 300px;
+			margin: 1rem;
+			&:nth-child(2) {
+				@include flex($align: center, $direction: column);
+			}
+		}
+	}
+	&-app-links {
+		@include flex($align: center);
+		@include mq('tablet-wide', max) {
+			justify-content: center;
+		}
+		&-link {
+			width: 35%;
+		}
+	}
+	&-title {
+		font-family: var(--ff-heading);
+		font-weight: var(--fw-bold);
+		font-size: 1.15rem;
+		text-transform: capitalize;
+	}
+	&-paragraph {
+		color: var(--clr-neutral-400) !important;
+	}
+	&-links {
+		&-wrapper {
+			@include flex(space-around);
+			flex: 1;
+			text-align: center;
+		}
+		&-list {
+			margin-top: 1.5rem;
+
+			a:hover {
+				text-decoration: underline;
+				color: var(--clr-neutral-300) !important;
+			}
+		}
+	}
+	&-logo {
+		width: 180px;
+	}
+	&-copyright {
+		display: grid;
+		place-items: center;
+		text-align: center;
+		border-top: 1px solid var(--clr-neutral-100);
+		padding-top: 1.5rem;
+		margin-top: 3rem;
+		font-size: 1.25rem;
+	}
+}
