@@ -37,6 +37,7 @@ function Category({ category }) {
 				className='categories-category-image'
 				src={category.image}
 				alt={category.category}
+				loading='lazy'
 			/>
 		</div>
 	);

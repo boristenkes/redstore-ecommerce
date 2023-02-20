@@ -8,6 +8,7 @@ export default function Brand({ brand }) {
 				src={brand.logo}
 				alt={brand.label}
 				aria-label={brand.label}
+				loading='lazy'
 			/>
 		</a>
 	);

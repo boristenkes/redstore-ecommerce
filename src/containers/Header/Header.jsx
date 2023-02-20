@@ -22,7 +22,7 @@ export default function Header() {
 					</Button>
 				</div>
 				<div>
-					<img src={hero} alt='2 football players' />
+					<img src={hero} alt='2 football players' loading='lazy' />
 				</div>
 			</div>
 		</header>

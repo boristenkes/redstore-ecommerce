@@ -7,7 +7,12 @@ export default function CTA() {
 	return (
 		<section className='cta'>
 			<div className='cta-wrapper | container even-columns section-padding'>
-				<img className='cta-image' src={exclusive} alt='Exclusive Product' />
+				<img
+					className='cta-image'
+					src={exclusive}
+					alt='Exclusive Product'
+					loading='lazy'
+				/>
 				<div>
 					<h2 className='cta-title | head-text'>Smart Band 4</h2>
 					<p className='cta-description | body-text'>

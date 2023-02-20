@@ -1,7 +1,7 @@
 @use '../abstracts/' as *;
 
 .container {
-	width: min((100% - 2rem), var(--container-width, 1200px));
+	width: min((100% - 2rem), var(--container-width, 1300px));
 	margin-inline: auto;
 }
 

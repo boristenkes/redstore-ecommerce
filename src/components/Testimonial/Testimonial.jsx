@@ -12,6 +12,7 @@ export default function Testimonial({ testimonial }) {
 				className='testimonial-avatar'
 				src={testimonial.avatar}
 				alt={testimonial.name}
+				loading='lazy'
 			/>
 			<h3 className='testimonial-name'>{testimonial.name}</h3>
 		</div>
