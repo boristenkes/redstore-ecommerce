@@ -1,30 +1,19 @@
-import { useEffect, useState } from 'react';
+import { useFetch } from '../../hooks';
+import { Loader } from '../../components';
 import './Categories.scss';
 
 export default function Categories() {
-	const [categories, setCategories] = useState([]);
-
-	useEffect(() => {
-		const fetchData = async () => {
-			try {
-				const response = await fetch('http://localhost:3500/categories');
-				const data = await response.json();
-				setCategories(data);
-			} catch (err) {
-				console.error(err);
-			}
-		};
-		fetchData();
-	}, []);
+	const [categories, fetchError, isLoading] = useFetch('/categories');
 
 	return (
 		<section className='categories | container section-padding'>
-			{categories.length ? (
+			{isLoading && <Loader />}
+			{!fetchError ? (
 				categories.map(category => (
 					<Category key={category.id} category={category} />
 				))
 			) : (
-				<p style={{ color: 'red' }}>Failed to fetch data</p>
+				<p style={{ color: 'red' }}>{fetchError}</p>
 			)}
 		</section>
 	);

@@ -13,7 +13,7 @@ export default function Navbar() {
 	return (
 		<header className='navbar | container'>
 			<div className='navbar-logo'>
-				<Link to='/'>
+				<Link to='/' aria-label='Home'>
 					<Logo />
 				</Link>
 			</div>

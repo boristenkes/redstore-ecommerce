@@ -1,13 +1,14 @@
-import { Product } from '../../components';
+import { Loader, Product } from '../../components';
 import './Products.scss';
 
-export default function Products({ products }) {
+export default function Products({ products, fetchError, isLoading }) {
 	return (
-		<div className='products'>
-			{products.length ? (
+		<div className='products | container'>
+			{isLoading && <Loader />}
+			{!fetchError ? (
 				products.map(product => <Product key={product.id} product={product} />)
 			) : (
-				<p style={{ color: 'red' }}>Failed to fetch data.</p>
+				<p style={{ color: 'red' }}>{fetchError}</p>
 			)}
 		</div>
 	);

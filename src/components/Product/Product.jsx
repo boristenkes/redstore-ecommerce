@@ -5,7 +5,7 @@ import { useStars } from '../../hooks';
 
 export default function Product({ product }) {
 	return (
-		<Link to={`/product/${product.id}`} className='product'>
+		<Link to={`?id=${product.id}`} className='product'>
 			<img
 				className='product-image'
 				src={product.images[0]}
@@ -14,7 +14,7 @@ export default function Product({ product }) {
 			/>
 			<h3 className='product-name'>{product.name}</h3>
 			<ul className='product-rating'>{useStars(product.rating)}</ul>
-			<p className='product-price'>{product.price['usd']}</p>
+			<p className='product-price'>${product.price['usd']}</p>
 		</Link>
 	);
 }

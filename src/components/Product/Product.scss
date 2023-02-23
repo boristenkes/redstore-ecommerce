@@ -39,9 +39,5 @@
 		font-family: var(--ff-primary);
 		font-weight: var(--fw-regular);
 		color: var(--clr-neutral-600);
-
-		&::after {
-			content: '.00';
-		}
 	}
 }

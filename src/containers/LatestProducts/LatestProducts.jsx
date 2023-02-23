@@ -1,28 +1,20 @@
-import { useEffect, useState } from 'react';
+import { useFetch } from '../../hooks';
 import Products from '../Products/Products';
 import './LatestProducts.scss';
 
 export default function LatestProducts() {
-	const [latestProducts, setLatestProducts] = useState([]);
+	const [products, fetchError, isLoading] = useFetch('/products');
 
-	useEffect(() => {
-		const fetchData = async () => {
-			try {
-				const response = await fetch('http://localhost:3500/products');
-				const allProducts = await response.json();
-
-				setLatestProducts(allProducts.slice(0, 8));
-			} catch (err) {
-				console.error(err.message);
-			}
-		};
-		fetchData();
-	}, []);
+	const latestProducts = products.slice(0, 8);
 
 	return (
 		<section className='container section-padding'>
 			<h2 className='section-title'>Latest Products</h2>
-			<Products products={latestProducts} />
+			<Products
+				products={latestProducts}
+				fetchError={fetchError}
+				isLoading={isLoading}
+			/>
 		</section>
 	);
 }

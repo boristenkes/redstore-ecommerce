@@ -1,6 +1,7 @@
 @use '../../scss/abstracts/' as *;
 
 .products {
+	--container-width: 1080px;
 	@include flex(center, flex-end, $wrap: wrap);
 	gap: 1rem;
 }

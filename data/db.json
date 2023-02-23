@@ -27,15 +27,16 @@
 			],
 			"name": "Red Printed T-Shirt",
 			"description": "Give your summer wardrobe a style upgrade with the HRX Men's Active T-Shirt. Team is with a pair of shorts for your morning workout or a denims for an evening with the guys.",
-			"rating": 4.0,
+			"rating": 3.0,
 			"price": {
-				"usd": "$50"
+				"usd": 50
 			},
 			"sizes": ["L", "M", "XL", "3XL", "S"],
 			"featured": true
 		},
+
 		{
-			"id": "d7c8b044-2173-446b-bc4b-fb2416c081d5",
+			"id": "d7c8b14-2173-446b-bc4b-fb2416c081d5",
 			"images": [
 				"https://redstore-ecommerce-design.netlify.app/images/product-2.jpg"
 			],
@@ -43,11 +44,138 @@
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
 			"rating": 3.5,
 			"price": {
-				"usd": "$60"
+				"usd": 60
 			},
 			"sizes": ["2XL", "M", "XL", "XS"],
 			"featured": true
 		},
+		{
+			"id": "d7c8344-2173-446b-bc4b-fb2416c081d5",
+			"images": [
+				"https://redstore-ecommerce-design.netlify.app/images/product-2.jpg"
+			],
+			"name": "Black Shoes",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
+			"rating": 3.5,
+			"price": {
+				"usd": 60
+			},
+			"sizes": ["2XL", "M", "XL", "XS"],
+			"featured": true
+		},
+		{
+			"id": "d7c2b044-2173-446b-bc4b-fb2416c081d5",
+			"images": [
+				"https://redstore-ecommerce-design.netlify.app/images/product-2.jpg"
+			],
+			"name": "Black Shoes",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
+			"rating": 3.5,
+			"price": {
+				"usd": 60
+			},
+			"sizes": ["2XL", "M", "XL", "XS"],
+			"featured": true
+		},
+		{
+			"id": "d718b044-2173-446b-bc4b-fb2416c081d5",
+			"images": [
+				"https://redstore-ecommerce-design.netlify.app/images/product-2.jpg"
+			],
+			"name": "Black Shoes",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
+			"rating": 3.5,
+			"price": {
+				"usd": 60
+			},
+			"sizes": ["2XL", "M", "XL", "XS"],
+			"featured": true
+		},
+		{
+			"id": "d7c8b041-2173-446b-bc4b-fb2416c081d5",
+			"images": [
+				"https://redstore-ecommerce-design.netlify.app/images/product-2.jpg"
+			],
+			"name": "Black Shoes",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
+			"rating": 3.5,
+			"price": {
+				"usd": 60
+			},
+			"sizes": ["2XL", "M", "XL", "XS"],
+			"featured": true
+		},
+		{
+			"id": "d7c8b032173-446b-bc4b-fb2416c081d5",
+			"images": [
+				"https://redstore-ecommerce-design.netlify.app/images/product-2.jpg"
+			],
+			"name": "Black Shoes",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
+			"rating": 3.5,
+			"price": {
+				"usd": 60
+			},
+			"sizes": ["2XL", "M", "XL", "XS"],
+			"featured": true
+		},
+		{
+			"id": "d7c8b2-2173-446b-bc4b-fb2416c081d5",
+			"images": [
+				"https://redstore-ecommerce-design.netlify.app/images/product-2.jpg"
+			],
+			"name": "Black Shoes",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
+			"rating": 3.5,
+			"price": {
+				"usd": 60
+			},
+			"sizes": ["2XL", "M", "XL", "XS"],
+			"featured": true
+		},
+		{
+			"id": "d7c8b344-2173-446b-bc4b-fb2416c081d5",
+			"images": [
+				"https://redstore-ecommerce-design.netlify.app/images/product-2.jpg"
+			],
+			"name": "Black Shoes",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
+			"rating": 3.5,
+			"price": {
+				"usd": 60
+			},
+			"sizes": ["2XL", "M", "XL", "XS"],
+			"featured": true
+		},
+		{
+			"id": "d7c82b044-2173-446b-bc4b-fb2416c081d5",
+			"images": [
+				"https://redstore-ecommerce-design.netlify.app/images/product-2.jpg"
+			],
+			"name": "Black Shoes",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
+			"rating": 3.5,
+			"price": {
+				"usd": 60
+			},
+			"sizes": ["2XL", "M", "XL", "XS"],
+			"featured": true
+		},
+		{
+			"id": "d7c8b12044-2173-446b-bc4b-fb2416c081d5",
+			"images": [
+				"https://redstore-ecommerce-design.netlify.app/images/product-2.jpg"
+			],
+			"name": "Black Shoes",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
+			"rating": 3.5,
+			"price": {
+				"usd": 60
+			},
+			"sizes": ["2XL", "M", "XL", "XS"],
+			"featured": true
+		},
+
 		{
 			"id": "30d90133-adf3-4b4c-93b0-38b50bb8827f",
 			"images": [
@@ -55,9 +183,9 @@
 			],
 			"name": "Gray Nollenel Panths",
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
-			"rating": 4.5,
+			"rating": 2.5,
 			"price": {
-				"usd": "$55"
+				"usd": 55
 			},
 			"sizes": ["L", "S", "3XL", "S"],
 			"featured": true
@@ -71,7 +199,7 @@
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
 			"rating": 4.0,
 			"price": {
-				"usd": "$50"
+				"usd": 50
 			},
 			"sizes": ["L", "M", "XL", "3XL", "S"],
 			"featured": true
@@ -83,9 +211,9 @@
 			],
 			"name": "Grayish-White Shoes",
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
-			"rating": 4.0,
+			"rating": 1.5,
 			"price": {
-				"usd": "$60"
+				"usd": 60
 			},
 			"sizes": ["L", "XL", "3XL", "S"]
 		},
@@ -96,9 +224,9 @@
 			],
 			"name": "Black Puma T-Shirt",
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
-			"rating": 4.0,
+			"rating": 3.5,
 			"price": {
-				"usd": "$40"
+				"usd": 40
 			},
 			"sizes": ["L", "M", "XL", "3XL", "S"]
 		},
@@ -109,9 +237,9 @@
 			],
 			"name": "HRX Socks",
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
-			"rating": 3.5,
+			"rating": 3.0,
 			"price": {
-				"usd": "$25"
+				"usd": 25
 			},
 			"sizes": ["L", "M", "XL", "S"]
 		},
@@ -122,9 +250,9 @@
 			],
 			"name": "Black Fossil Watch",
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
-			"rating": 4.5,
+			"rating": 4.0,
 			"price": {
-				"usd": "$90"
+				"usd": 90
 			},
 			"sizes": ["XS", "L", "M", "XL", "S"]
 		},
@@ -135,9 +263,9 @@
 			],
 			"name": "Black Roadster Watch",
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
-			"rating": 4.0,
+			"rating": 2.0,
 			"price": {
-				"usd": "$60"
+				"usd": 60
 			},
 			"sizes": ["L", "M", "XL", "3XL", "S"]
 		},
@@ -149,9 +277,9 @@
 			],
 			"name": "Black HRX Shoes",
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
-			"rating": 4.0,
+			"rating": 1.5,
 			"price": {
-				"usd": "$40"
+				"usd": 40
 			},
 			"sizes": ["L", "XL", "3XL", "S"]
 		},
@@ -162,9 +290,9 @@
 			],
 			"name": "Gray Home Shoes",
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
-			"rating": 3.5,
+			"rating": 1.5,
 			"price": {
-				"usd": "$25"
+				"usd": 25
 			},
 			"sizes": ["L", "M", "XL", "3XL"]
 		},
@@ -175,9 +303,9 @@
 			],
 			"name": "Black Nike Panths",
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
-			"rating": 4.5,
+			"rating": 3.5,
 			"price": {
-				"usd": "$90"
+				"usd": 90
 			},
 			"sizes": ["L", "M", "XL", "2XL", "S"]
 		}
@@ -186,21 +314,21 @@
 		{
 			"id": "e7f99fd1-3d9d-4463-8821-694c4123a0aa",
 			"feedback": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's standard dummy text ever",
-			"rating": 4.0,
+			"rating": 3.0,
 			"avatar": "https://redstore-ecommerce-design.netlify.app/images/user-1.png",
 			"name": "Sean Parker"
 		},
 		{
 			"id": "c575afc3-deac-4dbd-a164-e7e6131c440e",
 			"feedback": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's standard dummy text ever",
-			"rating": 3.5,
+			"rating": 4,
 			"avatar": "https://redstore-ecommerce-design.netlify.app/images/user-2.png",
 			"name": "Mike Smith"
 		},
 		{
 			"id": "5c61a515-0fcc-4041-ae2f-16adbdc239bd",
 			"feedback": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's standard dummy text ever",
-			"rating": 4.5,
+			"rating": 3.5,
 			"avatar": "https://redstore-ecommerce-design.netlify.app/images/user-3.png",
 			"name": "Mabel Joe"
 		}
