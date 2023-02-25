@@ -1,52 +1,88 @@
 import './Pagination.scss';
 import { v4 as uuid } from 'uuid';
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import { HiDotsHorizontal } from 'react-icons/hi';
+import {
+	FiChevronLeft as ArrowLeft,
+	FiChevronRight as ArrowRight,
+} from 'react-icons/fi';
+import { HiDotsHorizontal as Dots } from 'react-icons/hi';
 import { useContext, useEffect, useState } from 'react';
 import ProductContext from '../../context/ProductContext';
 import PageItem from './PageItem';
 
 export default function Pagination({ allProducts }) {
 	const maxProductsPerPage = 12;
-	const paginationButtons = [];
-	const totalPages = Math.round(allProducts.length / maxProductsPerPage);
+	const [pageButtons, setPageButtons] = useState([]);
+	const totalPages = Math.ceil(allProducts.length / maxProductsPerPage);
 	const { currentPage } = useContext(ProductContext);
+	const pageNumbers = [];
 
-	for (let i = 0; i < totalPages; i++)
-		paginationButtons.push(
-			<PageItem isActive={i === currentPage} to={i} key={uuid()}>
-				{i + 1}
-			</PageItem>,
+	useEffect(() => {
+		for (let i = 0; i < totalPages; i++) {
+			pageNumbers.push(i);
+		}
+
+		const allPageButtons = pageNumbers.map(pageIndex => (
+			<PageItem
+				isActive={pageIndex === currentPage}
+				to={pageIndex}
+				key={uuid()}
+			>
+				{pageIndex + 1}
+			</PageItem>
+		));
+
+		const visiblePageButtons = allPageButtons.slice(
+			currentPage - 2 < 0 ? 0 : currentPage - 2,
+			currentPage + 3,
 		);
 
-	if (totalPages > 4)
-		paginationButtons.push(
-			<>
-				<PageItem key={uuid()}>
-					<HiDotsHorizontal />
-				</PageItem>
+		setPageButtons([
+			currentPage > 2
+				? [
+						<PageItem isActive={currentPage === 1} to={1} key={uuid()}>
+							1
+						</PageItem>,
+						<PageItem isDisabled key={uuid()}>
+							<Dots />
+						</PageItem>,
+				  ]
+				: [],
 
-				<PageItem to={totalPages} key={uuid()}>
-					{totalPages}
-				</PageItem>
-			</>,
-		);
+			...visiblePageButtons,
+
+			currentPage < totalPages - 3
+				? [
+						<PageItem isDisabled key={uuid()}>
+							<Dots />
+						</PageItem>,
+						<PageItem isActive={currentPage === totalPages - 1} key={uuid()}>
+							{totalPages}
+						</PageItem>,
+				  ]
+				: [],
+		]);
+
+		console.log(pageButtons);
+	}, [currentPage, totalPages]);
 
 	return (
-		<ul className='pagination | container'>
-			{currentPage !== 0 && (
-				<PageItem to={currentPage - 1} key={uuid()}>
-					<FiChevronLeft />
-				</PageItem>
-			)}
+		totalPages !== 1 && (
+			<nav>
+				<ul className='pagination | container'>
+					<PageItem to={currentPage - 1} isDisabled={!currentPage}>
+						<ArrowLeft />
+					</PageItem>
 
-			{paginationButtons}
+					{pageButtons}
 
-			{currentPage !== totalPages - 1 && (
-				<PageItem to={currentPage + 1} key={uuid()}>
-					<FiChevronRight />
-				</PageItem>
-			)}
-		</ul>
+					<PageItem
+						to={currentPage + 1}
+						isDisabled={currentPage === totalPages - 1}
+					>
+						<ArrowRight />
+					</PageItem>
+				</ul>
+			</nav>
+		)
 	);
 }

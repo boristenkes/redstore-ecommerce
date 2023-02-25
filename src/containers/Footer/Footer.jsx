@@ -21,12 +21,14 @@ export default function Footer() {
 						<a
 							href='https://play.google.com/store/games'
 							className='footer-app-links-link'
+							target='_blank'
 						>
 							<img src={playStore} alt='Play Store link' />
 						</a>
 						<a
 							href='https://www.apple.com/app-store/'
 							className='footer-app-links-link'
+							target='_blank'
 						>
 							<img src={appStore} alt='Apple Store link' />
 						</a>
