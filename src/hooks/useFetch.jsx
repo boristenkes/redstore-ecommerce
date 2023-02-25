@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 
 export default function useFetch(dataUrl) {
+	const API_URL =
+		'https://my-json-server.typicode.com/boristenkes/redstore-ecommerce';
 	const [data, setData] = useState([]);
 	const [fetchError, setFetchError] = useState(null);
 	const [isLoading, setIsLoading] = useState(false);
@@ -10,7 +12,7 @@ export default function useFetch(dataUrl) {
 
 		const fetchData = async url => {
 			try {
-				const response = await fetch('http://localhost:3500' + url);
+				const response = await fetch(API_URL + url);
 				setData(await response.json());
 				setFetchError(null);
 			} catch (err) {
