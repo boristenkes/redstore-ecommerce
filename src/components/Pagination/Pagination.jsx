@@ -2,39 +2,31 @@ import './Pagination.scss';
 import { v4 as uuid } from 'uuid';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { HiDotsHorizontal } from 'react-icons/hi';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import ProductContext from '../../context/ProductContext';
+import PageItem from './PageItem';
 
-export default function Pagination({ allProducts, setCurrentPageProducts }) {
+export default function Pagination({ allProducts }) {
 	const maxProductsPerPage = 12;
 	const paginationButtons = [];
 	const totalPages = Math.round(allProducts.length / maxProductsPerPage);
-	const [currentPage, setCurrentPage] = useState(1);
+	const { currentPage } = useContext(ProductContext);
 
-	const currentPageProducts = allProducts.slice(
-		currentPage - 1,
-		maxProductsPerPage,
-	);
-
-	for (let i = 1; i < totalPages; i++)
+	for (let i = 0; i < totalPages; i++)
 		paginationButtons.push(
-			<PageItem
-				isActive={i === currentPage}
-				setCurrentPage={setCurrentPage}
-				to={i}
-				key={uuid()}
-			>
-				{i}
+			<PageItem isActive={i === currentPage} to={i} key={uuid()}>
+				{i + 1}
 			</PageItem>,
 		);
 
 	if (totalPages > 4)
 		paginationButtons.push(
 			<>
-				<PageItem isDisabled={true} key={uuid()}>
+				<PageItem key={uuid()}>
 					<HiDotsHorizontal />
 				</PageItem>
 
-				<PageItem setCurrentPage={setCurrentPage} to={totalPages} key={uuid()}>
+				<PageItem to={totalPages} key={uuid()}>
 					{totalPages}
 				</PageItem>
 			</>,
@@ -42,51 +34,19 @@ export default function Pagination({ allProducts, setCurrentPageProducts }) {
 
 	return (
 		<ul className='pagination | container'>
-			{currentPage !== 1 && (
-				<PageItem
-					setCurrentPage={setCurrentPage}
-					to={currentPage - 1}
-					key={uuid()}
-				>
+			{currentPage !== 0 && (
+				<PageItem to={currentPage - 1} key={uuid()}>
 					<FiChevronLeft />
 				</PageItem>
 			)}
 
-			{paginationButtons.slice(0, maxProductsPerPage)}
+			{paginationButtons}
 
-			{currentPage !== totalPages && (
-				<PageItem
-					setCurrentPage={setCurrentPage}
-					to={currentPage + 1}
-					key={uuid()}
-				>
+			{currentPage !== totalPages - 1 && (
+				<PageItem to={currentPage + 1} key={uuid()}>
 					<FiChevronRight />
 				</PageItem>
 			)}
 		</ul>
-	);
-}
-
-function PageItem({
-	to,
-	isDisabled,
-	isActive,
-	children,
-	setCurrentPage,
-	...props
-}) {
-	return (
-		<li className='pagination-item' {...props}>
-			<button
-				className={`${isActive ? 'active' : ''}`}
-				onClick={() => {
-					setCurrentPage(to);
-					setCurrentPageProducts(all);
-				}}
-				disabled={isDisabled}
-			>
-				{children}
-			</button>
-		</li>
 	);
 }

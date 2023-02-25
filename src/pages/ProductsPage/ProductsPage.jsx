@@ -1,11 +1,18 @@
 import './ProductsPage.scss';
 import { Loader, Pagination, Product } from '../../components';
 import { useFetch } from '../../hooks';
-import { useState } from 'react';
+import { useContext } from 'react';
+import ProductContext from '../../context/ProductContext';
 
 export default function ProductsPage() {
+	const maxProductsPerPage = 12;
 	const [products, fetchError, isLoading] = useFetch('/products');
-	const [currentPageProducts, setCurrentPageProducts] = useState([]);
+	const { currentPage } = useContext(ProductContext);
+
+	const currentPageProducts = products.slice(
+		currentPage * maxProductsPerPage,
+		currentPage * maxProductsPerPage + maxProductsPerPage,
+	);
 
 	return (
 		<section className='all-products | container section-padding'>
@@ -19,6 +26,7 @@ export default function ProductsPage() {
 					<option value='sale'>Sort by Sale</option>
 				</select>
 			</div>
+
 			<div className='products'>
 				{isLoading && <Loader absolute />}
 				{!fetchError ? (
@@ -29,10 +37,8 @@ export default function ProductsPage() {
 					<p style={{ color: 'red' }}>{fetchError}</p>
 				)}
 			</div>
-			<Pagination
-				allProducts={products}
-				setCurrentPageProducts={setCurrentPageProducts}
-			/>
+
+			<Pagination allProducts={products} />
 		</section>
 	);
 }

@@ -5,7 +5,7 @@ import { useStars } from '../../hooks';
 
 export default function Product({ product }) {
 	return (
-		<Link to={`?id=${product.id}`} className='product'>
+		<Link to={`/product/${product.id}`} className='product'>
 			<img
 				className='product-image'
 				src={product.images[0]}
