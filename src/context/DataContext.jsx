@@ -6,7 +6,7 @@ export const DataProvider = ({ children }) => {
 	const [currentProducts, setCurrentProducts] = useState([]);
 	const [currentPage, setCurrentPage] = useState(0);
 	const [currency, setCurrency] = useState('usd');
-	const [sort, setSort] = useState('default');
+	const [sort, setSort] = useState('date');
 
 	return (
 		<DataContext.Provider

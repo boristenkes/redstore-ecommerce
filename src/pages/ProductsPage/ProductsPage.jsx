@@ -11,12 +11,20 @@ export default function ProductsPage() {
 	const { currentPage, sort, currency } = useContext(ProductContext);
 	const today = format(new Date(), 'LLL dd, yyyy');
 
-	const sortedProducts =
-		sort === 'date'
-			? products.sort((p1, p2) => Date.parse(p1.date) > Date.parse(p2.date) ? 1 : -1)
-			: sort === 'price'
-			? products.sort((p1, p2) => p1.price[currency] > p2.price[currency] ? 1 : -1)
-			: products.sort((p1, p2) => (p1[sort] > p2[sort] ? 1 : -1));
+	const sortedProducts = products.sort((p1, p2) =>
+		(
+			sort.includes('date')
+				? Date.parse(p1.date) > Date.parse(p2.date)
+				: sort.includes('price')
+				? p1.price[currency] > p2.price[currency]
+				: p1[sort.slice(0, sort.indexOf('-'))] >
+				  p2[sort.slice(0, sort.indexOf('-'))]
+		)
+			? 1
+			: -1,
+	);
+
+	if (sort.includes('desc')) sortedProducts.reverse();
 
 	const currentPageProducts = sortedProducts.slice(
 		currentPage * maxProductsPerPage,
