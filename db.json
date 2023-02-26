@@ -29,6 +29,7 @@
 			"description": "Give your summer wardrobe a style upgrade with the HRX Men's Active T-Shirt. Team is with a pair of shorts for your morning workout or a denims for an evening with the guys.",
 			"rating": 3,
 			"price": { "usd": 50 },
+			"date": "Mar 29, 2023",
 			"sizes": ["L", "M", "XL", "3XL", "S"],
 			"featured": true
 		},
@@ -41,6 +42,7 @@
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
 			"rating": 3.5,
 			"price": { "usd": 60 },
+			"date": "Oct 14, 2023",
 			"sizes": ["2XL", "M", "XL", "XS"],
 			"featured": true
 		},
@@ -53,6 +55,7 @@
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
 			"rating": 2.5,
 			"price": { "usd": 55 },
+			"date": "Mar 18, 2021",
 			"sizes": ["L", "S", "3XL", "S"],
 			"featured": true
 		},
@@ -65,6 +68,7 @@
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
 			"rating": 4,
 			"price": { "usd": 50 },
+			"date": "Aug 30, 2020",
 			"sizes": ["L", "M", "XL", "3XL", "S"],
 			"featured": true
 		},
@@ -77,6 +81,7 @@
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
 			"rating": 1.5,
 			"price": { "usd": 60 },
+			"date": "Jun 06, 2020",
 			"sizes": ["L", "XL", "3XL", "S"]
 		},
 		{
@@ -88,6 +93,7 @@
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
 			"rating": 3.5,
 			"price": { "usd": 40 },
+			"date": "Jul 01, 2021",
 			"sizes": ["L", "M", "XL", "3XL", "S"]
 		},
 		{
@@ -99,6 +105,7 @@
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
 			"rating": 3,
 			"price": { "usd": 25 },
+			"date": "Jun 23, 2022",
 			"sizes": ["L", "M", "XL", "S"]
 		},
 		{
@@ -110,6 +117,7 @@
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
 			"rating": 4,
 			"price": { "usd": 90 },
+			"date": "May 24, 2022",
 			"sizes": ["XS", "L", "M", "XL", "S"]
 		},
 		{
@@ -121,6 +129,7 @@
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
 			"rating": 2,
 			"price": { "usd": 60 },
+			"date": "May 30, 2022",
 			"sizes": ["L", "M", "XL", "3XL", "S"]
 		},
 		{
@@ -132,6 +141,7 @@
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
 			"rating": 1.5,
 			"price": { "usd": 40 },
+			"date": "Feb 01, 2021",
 			"sizes": ["L", "XL", "3XL", "S"]
 		},
 		{
@@ -143,6 +153,7 @@
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
 			"rating": 1.5,
 			"price": { "usd": 25 },
+			"date": "Jun 09, 2023",
 			"sizes": ["L", "M", "XL", "3XL"]
 		},
 		{
@@ -154,6 +165,7 @@
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
 			"rating": 3.5,
 			"price": { "usd": 90 },
+			"date": "Dec 13, 2023",
 			"sizes": ["L", "M", "XL", "2XL", "S"]
 		}
 	],

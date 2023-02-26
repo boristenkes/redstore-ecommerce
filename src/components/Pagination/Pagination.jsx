@@ -6,14 +6,14 @@ import {
 } from 'react-icons/fi';
 import { HiDotsHorizontal as Dots } from 'react-icons/hi';
 import { useContext, useEffect, useState } from 'react';
-import ProductContext from '../../context/ProductContext';
+import DataContext from '../../context/DataContext';
 import PageItem from './PageItem';
 
 export default function Pagination({ allProducts }) {
 	const maxProductsPerPage = 12;
 	const [pageButtons, setPageButtons] = useState([]);
 	const totalPages = Math.ceil(allProducts.length / maxProductsPerPage);
-	const { currentPage } = useContext(ProductContext);
+	const { currentPage } = useContext(DataContext);
 	const pageNumbers = [];
 
 	useEffect(() => {
@@ -61,8 +61,6 @@ export default function Pagination({ allProducts }) {
 				  ]
 				: [],
 		]);
-
-		console.log(pageButtons);
 	}, [currentPage, totalPages]);
 
 	return (
