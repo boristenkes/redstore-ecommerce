@@ -1,7 +1,7 @@
 @use '../../scss/abstracts/' as *;
 
 .product {
-	@include separate-children(0.5rem);
+	@include separate-children(0.15rem);
 	flex: 1;
 	min-width: 250px;
 	max-width: 25%;
@@ -9,7 +9,7 @@
 	margin-bottom: 1.5rem;
 
 	&:hover {
-		transform: translateY(-0.5rem);
+		transform: translateY(-0.5rem) scale(1.1);
 	}
 
 	&-image {
@@ -27,6 +27,15 @@
 		overflow: hidden;
 		white-space: nowrap;
 		max-width: 250px;
+	}
+
+	&-info-wrapper {
+		padding-inline: 1rem;
+		@include separate-children(0.15rem);
+
+		div {
+			@include flex(space-between, center);
+		}
 	}
 
 	&-rating {

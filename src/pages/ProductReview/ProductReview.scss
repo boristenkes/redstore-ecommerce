@@ -1,0 +1,17 @@
+@use '../../scss/abstracts/' as *;
+
+.product-review {
+	--container-width: 1080px;
+	@include flex(space-between, center);
+	gap: 5rem;
+	position: relative;
+
+	@include mq('tablet-wide', max) {
+		flex-direction: column;
+	}
+
+	> * {
+		flex: 1;
+		width: min(500px, 100%);
+	}
+}

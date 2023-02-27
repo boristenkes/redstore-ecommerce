@@ -1,0 +1,56 @@
+@use '../../scss/abstracts/' as *;
+
+.product-details {
+	@include separate-children();
+	font-family: var(--ff-primary);
+
+	&-category {
+		color: var(--clr-neutral-700);
+	}
+	&-name,
+	&-description {
+		text-align: left !important;
+	}
+	&-name {
+		font-size: clamp(2.5rem, 5vw, 3.125rem) !important;
+	}
+	&-price {
+		font-size: 2rem;
+		font-weight: var(--fw-semibold);
+		color: var(--clr-neutral-600);
+	}
+	&-sizes,
+	&-quantity {
+		border: 1px solid var(--clr-primary-500);
+		padding: 0.5rem;
+	}
+	&-quantity {
+		font-size: 1.25rem;
+		max-width: 8ch;
+	}
+	div {
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+
+		&:has(button) {
+			@include mq('tablet-small', max) {
+				flex-direction: column;
+				align-items: flex-start;
+
+				button {
+					margin-inline: 0;
+				}
+			}
+		}
+	}
+	h2 {
+		font-weight: var(--fw-bold);
+		font-size: 1.25rem;
+	}
+	svg {
+		fill: var(--clr-primary-500);
+		font-weight: var(--fw-bold);
+		font-size: 1.25rem;
+	}
+}

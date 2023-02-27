@@ -8,10 +8,14 @@ export default function SortBy() {
 	return (
 		<select
 			id='sort-by'
-			defaultValue=''
+			defaultValue='placeholder'
 			onChange={e => setSort(e.target.value)}
 		>
-			<option value='' disabled hidden>
+			<option
+				value='placeholder'
+				disabled
+				hidden
+			>
 				Sort By
 			</option>
 			<option value='name-asc'>Name &#8599;</option>

@@ -23,21 +23,30 @@ export default function Footer() {
 							className='footer-app-links-link'
 							target='_blank'
 						>
-							<img src={playStore} alt='Play Store link' />
+							<img
+								src={playStore}
+								alt='Play Store link'
+							/>
 						</a>
 						<a
 							href='https://www.apple.com/app-store/'
 							className='footer-app-links-link'
 							target='_blank'
 						>
-							<img src={appStore} alt='Apple Store link' />
+							<img
+								src={appStore}
+								alt='Apple Store link'
+							/>
 						</a>
 					</div>
 				</div>
 
 				<div>
-					<Link>
-						<Logo className='footer-logo' fillMain='var(--clr-neutral-100)' />
+					<Link aria-label='Home'>
+						<Logo
+							className='footer-logo'
+							fillMain='var(--clr-neutral-100)'
+						/>
 					</Link>
 					<p className='footer-paragraph | body-text'>
 						Out Purpose Is To Sustainably Make the Please and Benefits of Sports
@@ -50,22 +59,34 @@ export default function Footer() {
 						<h3 className='footer-title'>Useful Links</h3>
 						<ul className='footer-links-list'>
 							<li>
-								<a className='footer-paragraph | body-text' href='#'>
+								<a
+									className='footer-paragraph | body-text'
+									href='#'
+								>
 									Coupons
 								</a>
 							</li>
 							<li>
-								<a className='footer-paragraph | body-text' href='#'>
+								<a
+									className='footer-paragraph | body-text'
+									href='#'
+								>
 									Blog Post
 								</a>
 							</li>
 							<li>
-								<a className='footer-paragraph | body-text' href='#'>
+								<a
+									className='footer-paragraph | body-text'
+									href='#'
+								>
 									Return Policy
 								</a>
 							</li>
 							<li>
-								<a className='footer-paragraph | body-text' href='#'>
+								<a
+									className='footer-paragraph | body-text'
+									href='#'
+								>
 									Join Affiliate
 								</a>
 							</li>
