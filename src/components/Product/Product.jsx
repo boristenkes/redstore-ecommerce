@@ -20,7 +20,7 @@ export default function Product({ product }) {
 				<h3 className='product-name'>{product.name}</h3>
 				<div>
 					<ul className='product-rating'>{useStars(product.rating)}</ul>
-					<p className='product-price'>${product.price['usd']}</p>
+					<p className='product-price'>${product.price['usd'].toFixed(2)}</p>
 				</div>
 			</div>
 		</Link>

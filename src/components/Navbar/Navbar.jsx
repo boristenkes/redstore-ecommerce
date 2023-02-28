@@ -10,6 +10,11 @@ export default function Navbar() {
 	const isDesktop = useMediaQuery({ query: '(min-width: 640px)' });
 	const [isOpen, setOpen] = useState(false);
 
+	const handleNavClick = () => {
+		setOpen(false);
+		window.scrollTo({ top: 0 });
+	};
+
 	return (
 		<header className='navbar | container'>
 			<div className='navbar-logo'>
@@ -28,31 +33,31 @@ export default function Navbar() {
 				>
 					<li
 						className='navbar-nav-item'
-						onClick={() => setOpen(false)}
+						onClick={handleNavClick}
 					>
 						<Link to='/'>Home</Link>
 					</li>
 					<li
 						className='navbar-nav-item'
-						onClick={() => setOpen(false)}
+						onClick={handleNavClick}
 					>
 						<Link to='/products'>Products</Link>
 					</li>
 					<li
 						className='navbar-nav-item'
-						onClick={() => setOpen(false)}
+						onClick={handleNavClick}
 					>
 						<Link to='/about'>About</Link>
 					</li>
 					<li
 						className='navbar-nav-item'
-						onClick={() => setOpen(false)}
+						onClick={handleNavClick}
 					>
 						<Link to='/contact'>Contact</Link>
 					</li>
 					<li
 						className='navbar-nav-item'
-						onClick={() => setOpen(false)}
+						onClick={handleNavClick}
 					>
 						<Link to='/account'>Account</Link>
 					</li>

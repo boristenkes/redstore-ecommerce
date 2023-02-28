@@ -42,7 +42,10 @@ export default function ProductsPage() {
 				{isLoading && <Loader absolute />}
 				{!fetchError ? (
 					currentPageProducts.map(product => (
-						<Product key={product.id} product={product} />
+						<Product
+							key={product.id}
+							product={product}
+						/>
 					))
 				) : (
 					<p style={{ color: 'red' }}>{fetchError}</p>

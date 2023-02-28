@@ -1,7 +1,6 @@
 import './ProductImages.scss';
 import { v4 as uuid } from 'uuid';
 import { useState } from 'react';
-import classNames from 'classnames';
 
 export default function ProductImages({ images }) {
 	const totalImages = images.length;
@@ -13,11 +12,10 @@ export default function ProductImages({ images }) {
 				<ul className='product-gallery-album'>
 					{images.map((image, index) => (
 						<li
-							key={uuid()}
-							className={classNames({
-								'product-gallery-album-item': true,
-								active: index === activeNavIndex,
-							})}
+							key={`product-${index + 1}`}
+							className={`product-gallery-album-item ${
+								index === activeNavIndex ? 'active' : ''
+							}`}
 						>
 							<img
 								src={image}
@@ -31,7 +29,10 @@ export default function ProductImages({ images }) {
 				<img
 					src={images[0]}
 					alt='Only Product Image'
-					className='product-gallery-album-only-image'
+					style={{
+						boxShadow: 'var(--album-shadow)',
+						borderRadius: '.25rem',
+					}}
 				/>
 			)}
 
@@ -45,11 +46,10 @@ export default function ProductImages({ images }) {
 							<input
 								id={`navigation-${index + 1}`}
 								type='radio'
-								name={'album-image'}
+								name={'album-nav'}
 								className='product-gallery-navigation-nav'
 								checked={index === activeNavIndex}
 								onChange={() => setActiveNavIndex(index)}
-								style={{ opacity: index === activeNavIndex ? 1 : 0 }}
 							/>
 							<img
 								src={image}

@@ -11,8 +11,8 @@
 
 		&-item {
 			aspect-ratio: 1;
-			transition: opacity, z-index, 500ms ease-in-out;
 			background: #f1f1f1;
+			transition: opacity, z-index, 500ms ease-in-out;
 
 			&:not(.active) {
 				position: absolute;
@@ -27,10 +27,6 @@
 			height: 100%;
 			width: 100%;
 			object-fit: contain;
-		}
-		&-only-image {
-			box-shadow: var(--album-shadow);
-			border-radius: 0.25rem;
 		}
 	}
 
@@ -47,6 +43,7 @@
 			overflow: hidden;
 			cursor: pointer;
 			border: 2px solid transparent;
+			border-radius: 0.25rem;
 
 			&:has(:checked),
 			&:hover {

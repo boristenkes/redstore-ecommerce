@@ -57,7 +57,9 @@
 		color: var(--clr-neutral-500);
 		&:hover {
 			color: var(--clr-primary-500);
-			fill: var(--clr-primary-500);
+			svg {
+				fill: var(--clr-primary-500);
+			}
 		}
 		&:last-child {
 			width: 30px;

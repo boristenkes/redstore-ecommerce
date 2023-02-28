@@ -42,17 +42,29 @@ export default function ProductDetails({ product }) {
 				))}
 			</select>
 			<div>
-				<input
-					type='text'
-					inputMode='numeric'
-					title='Quantity'
-					pattern='[0-9]+'
-					min={1}
-					max={100}
-					onChange={e => setQuantity(e.target.value || 1)}
-					value={parseInt(quantity) || quantity}
-					className='product-details-quantity'
-				/>
+				<div className='product-details-quantity-wrapper'>
+					<button
+						onClick={() => setQuantity(quantity === 1 ? 1 : quantity - 1)}
+						aria-label='Decrease quantity'
+					>
+						-
+					</button>
+					<input
+						type='number'
+						readOnly
+						inputMode='numeric'
+						title='Quantity'
+						pattern='[0-9]+'
+						value={quantity}
+						className='product-details-quantity'
+					/>
+					<button
+						onClick={() => setQuantity(quantity === 100 ? 100 : quantity + 1)}
+						aria-label='Increase quantity'
+					>
+						+
+					</button>
+				</div>
 				<Button type='submit'>Add To Cart</Button>
 			</div>
 			<div>
