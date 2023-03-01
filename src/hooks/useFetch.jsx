@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
-// https://my-json-server.typicode.com/boristenkes/redstore-ecommerce
 export default function useFetch(dataUrl) {
-	const API_URL = 'http://localhost:3500';
+	const API_URL =
+		'https://my-json-server.typicode.com/boristenkes/redstore-ecommerce';
 	const [data, setData] = useState([]);
 	const [fetchError, setFetchError] = useState(null);
 	const [isLoading, setIsLoading] = useState(false);
