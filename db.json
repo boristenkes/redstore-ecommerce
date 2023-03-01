@@ -2,17 +2,17 @@
 	"categories": [
 		{
 			"id": "934f49c0-42a3-48b9-a69e-a634b6ce5421",
-			"image": "https://redstore-ecommerce-design.netlify.app/images/category-1.jpg",
+			"image": "https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/category-1.webp",
 			"category": "Red Shoes"
 		},
 		{
 			"id": "6d437c53-48f1-4214-983f-16ec88010bce",
-			"image": "https://redstore-ecommerce-design.netlify.app/images/category-2.jpg",
+			"image": "https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/category-2.webp",
 			"category": "Adidas Shoes"
 		},
 		{
 			"id": "a7eb1892-bd28-43e2-a473-6a904f6e7b43",
-			"image": "https://redstore-ecommerce-design.netlify.app/images/category-3.jpg",
+			"image": "https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/category-3.webp",
 			"category": "Adidas"
 		}
 	],
@@ -20,10 +20,10 @@
 		{
 			"id": "8327df7c-7395-4110-b15a-abd212dbbfb2",
 			"images": [
-				"https://redstore-ecommerce-design.netlify.app/images/product-1.jpg",
-				"https://redstore-ecommerce-design.netlify.app/images/gallery-2.jpg",
-				"https://redstore-ecommerce-design.netlify.app/images/gallery-3.jpg",
-				"https://redstore-ecommerce-design.netlify.app/images/gallery-4.jpg"
+				"https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/product-1.webp",
+				"https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/gallery-2.webp",
+				"https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/gallery-3.webp",
+				"https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/gallery-4.webp"
 			],
 			"name": "Red Printed T-Shirt",
 			"description": "Give your summer wardrobe a style upgrade with the HRX Men's Active T-Shirt. Team is with a pair of shorts for your morning workout or a denims for an evening with the guys.",
@@ -36,7 +36,7 @@
 		{
 			"id": "54caa77d-cee4-4556-8689-53c2e53631f3",
 			"images": [
-				"https://redstore-ecommerce-design.netlify.app/images/product-2.jpg"
+				"https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/product-2.webp"
 			],
 			"name": "Black Shoes",
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
@@ -49,7 +49,7 @@
 		{
 			"id": "9f6e5ee1-224d-4203-88f6-4aa1e6d7218e",
 			"images": [
-				"https://redstore-ecommerce-design.netlify.app/images/product-3.jpg"
+				"https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/product-3.webp"
 			],
 			"name": "Gray Nollenel Panths",
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
@@ -62,7 +62,7 @@
 		{
 			"id": "70a93ddb-f4a6-4ee7-b5b7-1aa1d32f9681",
 			"images": [
-				"https://redstore-ecommerce-design.netlify.app/images/product-4.jpg"
+				"https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/product-4.webp"
 			],
 			"name": "Blue Puma T-Shirt",
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
@@ -75,7 +75,7 @@
 		{
 			"id": "40170c45-c283-4670-9633-c600f1f06017",
 			"images": [
-				"https://redstore-ecommerce-design.netlify.app/images/product-5.jpg"
+				"https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/product-5.webp"
 			],
 			"name": "Grayish-White Shoes",
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
@@ -87,7 +87,7 @@
 		{
 			"id": "26611d6e-b084-4ed3-8c81-2fda7e1dc284",
 			"images": [
-				"https://redstore-ecommerce-design.netlify.app/images/product-6.jpg"
+				"https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/product-6.webp"
 			],
 			"name": "Black Puma T-Shirt",
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
@@ -99,7 +99,7 @@
 		{
 			"id": "340dd7cd-970e-4d28-816e-a00b05aad9b6",
 			"images": [
-				"https://redstore-ecommerce-design.netlify.app/images/product-7.jpg"
+				"https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/product-7.webp"
 			],
 			"name": "HRX Socks",
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
@@ -111,7 +111,7 @@
 		{
 			"id": "607ed588-0228-4099-a868-4c69556356d4",
 			"images": [
-				"https://redstore-ecommerce-design.netlify.app/images/product-8.jpg"
+				"https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/product-8.webp"
 			],
 			"name": "Black Fossil Watch",
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
@@ -123,7 +123,7 @@
 		{
 			"id": "d3bcffbe-4bdd-4364-9969-eea801ea9275",
 			"images": [
-				"https://redstore-ecommerce-design.netlify.app/images/product-9.jpg"
+				"https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/product-9.webp"
 			],
 			"name": "Black Roadster Watch",
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
@@ -135,7 +135,7 @@
 		{
 			"id": "c4484027-1268-44c1-9426-0a5599120611",
 			"images": [
-				"https://redstore-ecommerce-design.netlify.app/images/product-10.jpg"
+				"https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/product-10.webp"
 			],
 			"name": "Black HRX Shoes",
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
@@ -147,7 +147,7 @@
 		{
 			"id": "d3ba1ad4-3f79-4b7e-884a-06ae29b1398e",
 			"images": [
-				"https://redstore-ecommerce-design.netlify.app/images/product-11.jpg"
+				"https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/product-11.webp"
 			],
 			"name": "Gray Home Shoes",
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
@@ -159,7 +159,7 @@
 		{
 			"id": "9c8d778e-26e3-4353-aed5-4575ee08af12",
 			"images": [
-				"https://redstore-ecommerce-design.netlify.app/images/product-12.jpg"
+				"https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/product-12.webp"
 			],
 			"name": "Black Nike Panths",
 			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates sapiente, nostrum nemo dolore eum enim perferendis fugit, ratione laboriosam natus architecto consequatur nam distinctio dolor ipsum possimus. Sunt, error reiciendis! Molestiae, quia?",
@@ -174,52 +174,52 @@
 			"id": "e7f99fd1-3d9d-4463-8821-694c4123a0aa",
 			"feedback": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's standard dummy text ever",
 			"rating": 3.0,
-			"avatar": "https://redstore-ecommerce-design.netlify.app/images/user-1.png",
+			"avatar": "https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/user-1.webp",
 			"name": "Sean Parker"
 		},
 		{
 			"id": "c575afc3-deac-4dbd-a164-e7e6131c440e",
 			"feedback": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's standard dummy text ever",
 			"rating": 4,
-			"avatar": "https://redstore-ecommerce-design.netlify.app/images/user-2.png",
+			"avatar": "https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/user-2.webp",
 			"name": "Mike Smith"
 		},
 		{
 			"id": "5c61a515-0fcc-4041-ae2f-16adbdc239bd",
 			"feedback": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been industry's standard dummy text ever",
 			"rating": 3.5,
-			"avatar": "https://redstore-ecommerce-design.netlify.app/images/user-3.png",
+			"avatar": "https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/user-3.webp",
 			"name": "Mabel Joe"
 		}
 	],
 	"brands": [
 		{
 			"id": "af4e5aa8-ee8a-42e1-8808-36ade5032253",
-			"logo": "https://redstore-ecommerce-design.netlify.app/images/logo-godrej.png",
+			"logo": "https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/logo-godrej.webp",
 			"link": "https://www.godrej.com/",
 			"label": "Godrej"
 		},
 		{
 			"id": "19143ed2-233e-45c8-9eef-ba0e0fa40189",
-			"logo": "https://redstore-ecommerce-design.netlify.app/images/logo-oppo.png",
+			"logo": "https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/logo-oppo.webp",
 			"link": "https://www.oppo.com/en/",
 			"label": "Oppo"
 		},
 		{
 			"id": "a8183611-2f11-45a2-82d0-ba9395d9434d",
-			"logo": "https://redstore-ecommerce-design.netlify.app/images/logo-coca-cola.png",
+			"logo": "https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/logo-coca-cola.webp",
 			"link": "https://www.coca-cola.com/country-selector",
 			"label": "Coca Cola"
 		},
 		{
 			"id": "d470736f-e951-44c1-b600-71fcfe3bf5e1",
-			"logo": "https://redstore-ecommerce-design.netlify.app/images/logo-paypal.png",
+			"logo": "https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/logo-paypal.webp",
 			"link": "https://www.paypal.com/",
 			"label": "PayPal"
 		},
 		{
 			"id": "a6648de0-9599-4485-a46e-e3d6d1475903",
-			"logo": "https://redstore-ecommerce-design.netlify.app/images/logo-philips.png",
+			"logo": "https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/logo-philips.webp",
 			"link": "https://www.usa.philips.com/",
 			"label": "Philips"
 		}

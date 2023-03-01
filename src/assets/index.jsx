@@ -1,53 +1,51 @@
-import category1 from './category-1.jpg';
-import category2 from './category-2.jpg';
-import category3 from './category-3.jpg';
+import category1 from './category-1.webp';
+import category2 from './category-2.webp';
+import category3 from './category-3.webp';
 
-import featured1 from './product-1.jpg';
-import featured2 from './product-2.jpg';
-import featured3 from './product-3.jpg';
-import featured4 from './product-4.jpg';
+import featured1 from './product-1.webp';
+import featured2 from './product-2.webp';
+import featured3 from './product-3.webp';
+import featured4 from './product-4.webp';
 
-import latest1 from './product-5.jpg';
-import latest2 from './product-6.jpg';
-import latest3 from './product-7.jpg';
-import latest4 from './product-8.jpg';
-import latest5 from './product-9.jpg';
-import latest6 from './product-10.jpg';
-import latest7 from './product-11.jpg';
-import latest8 from './product-12.jpg';
+import latest1 from './product-5.webp';
+import latest2 from './product-6.webp';
+import latest3 from './product-7.webp';
+import latest4 from './product-8.webp';
+import latest5 from './product-9.webp';
+import latest6 from './product-10.webp';
+import latest7 from './product-11.webp';
+import latest8 from './product-12.webp';
 
-import exclusive from './exclusive.png';
+import exclusive from './exclusive.webp';
 
-import sean from './user-1.png';
-import mike from './user-2.png';
-import mabel from './user-3.png';
+import sean from './user-1.webp';
+import mike from './user-2.webp';
+import mabel from './user-3.webp';
 
-import godrej from './logo-godrej.png';
-import oppo from './logo-oppo.png';
-import coke from './logo-coca-cola.png';
-import paypal from './logo-paypal.png';
-import philips from './logo-philips.png';
+import godrej from './logo-godrej.webp';
+import oppo from './logo-oppo.webp';
+import coke from './logo-coca-cola.webp';
+import paypal from './logo-paypal.webp';
+import philips from './logo-philips.webp';
 
-import product1 from './product-1.jpg';
-import product2 from './product-2.jpg';
-import product3 from './product-3.jpg';
-import product4 from './product-4.jpg';
-import product5 from './product-5.jpg';
-import product6 from './product-6.jpg';
-import product7 from './product-7.jpg';
-import product8 from './product-8.jpg';
-import product9 from './product-9.jpg';
-import product10 from './product-10.jpg';
-import product11 from './product-11.jpg';
-import product12 from './product-12.jpg';
+import product1 from './product-1.webp';
+import product2 from './product-2.webp';
+import product3 from './product-3.webp';
+import product4 from './product-4.webp';
+import product5 from './product-5.webp';
+import product6 from './product-6.webp';
+import product7 from './product-7.webp';
+import product8 from './product-8.webp';
+import product9 from './product-9.webp';
+import product10 from './product-10.webp';
+import product11 from './product-11.webp';
+import product12 from './product-12.webp';
 
 import Logo from './Logo';
 
-import hero from './hero.png';
-import playStore from './play-store.png';
-import appStore from './app-store.png';
-
-// TODO: Convert all images to webp
+import hero from './hero.webp';
+import playStore from './play-store.webp';
+import appStore from './app-store.webp';
 
 export const categories = {
 	category1: category1,
