@@ -10,7 +10,7 @@ export default function Navbar() {
 	const isDesktop = useMediaQuery({ query: '(min-width: 640px)' });
 	const [isOpen, setOpen] = useState(false);
 
-	const handleNavClick = () => {
+	const scrollToTop = () => {
 		setOpen(false);
 		window.scrollTo({ top: 0 });
 	};
@@ -21,6 +21,7 @@ export default function Navbar() {
 				<Link
 					to='/'
 					aria-label='Home'
+					onClick={scrollToTop}
 				>
 					<Logo />
 				</Link>
@@ -33,31 +34,31 @@ export default function Navbar() {
 				>
 					<li
 						className='navbar-nav-item'
-						onClick={handleNavClick}
+						onClick={scrollToTop}
 					>
 						<Link to='/'>Home</Link>
 					</li>
 					<li
 						className='navbar-nav-item'
-						onClick={handleNavClick}
+						onClick={scrollToTop}
 					>
 						<Link to='/products'>Products</Link>
 					</li>
 					<li
 						className='navbar-nav-item'
-						onClick={handleNavClick}
+						onClick={scrollToTop}
 					>
 						<Link to='/about'>About</Link>
 					</li>
 					<li
 						className='navbar-nav-item'
-						onClick={handleNavClick}
+						onClick={scrollToTop}
 					>
 						<Link to='/contact'>Contact</Link>
 					</li>
 					<li
 						className='navbar-nav-item'
-						onClick={handleNavClick}
+						onClick={scrollToTop}
 					>
 						<Link to='/account'>Account</Link>
 					</li>
@@ -65,6 +66,7 @@ export default function Navbar() {
 				<Link
 					to='/cart'
 					aria-label='Cart'
+					onClick={scrollToTop}
 				>
 					<Cart fill='var(--clr-neutral-900)' />
 				</Link>

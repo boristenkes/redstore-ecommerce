@@ -12,7 +12,7 @@ export default function Product({ product }) {
 		>
 			<img
 				className='product-image'
-				src={product.images[0]}
+				src={product.main_image}
 				alt={product.name}
 				loading='lazy'
 			/>
