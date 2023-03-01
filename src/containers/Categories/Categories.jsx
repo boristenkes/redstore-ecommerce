@@ -1,20 +1,35 @@
-import { useFetch } from '../../hooks';
-import { Loader } from '../../components';
 import './Categories.scss';
 
 export default function Categories() {
-	const [categories, fetchError, isLoading] = useFetch('/categories');
+	const categories = [
+		{
+			id: '934f49c0-42a3-48b9-a69e-a634b6ce5421',
+			image:
+				'https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/category-1.webp',
+			category: 'Red Shoes',
+		},
+		{
+			id: '6d437c53-48f1-4214-983f-16ec88010bce',
+			image:
+				'https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/category-2.webp',
+			category: 'Adidas Shoes',
+		},
+		{
+			id: 'a7eb1892-bd28-43e2-a473-6a904f6e7b43',
+			image:
+				'https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/category-3.webp',
+			category: 'Adidas',
+		},
+	];
 
 	return (
 		<section className='categories | container section-padding'>
-			{isLoading && <Loader />}
-			{!fetchError ? (
-				categories.map(category => (
-					<Category key={category.id} category={category} />
-				))
-			) : (
-				<p style={{ color: 'red' }}>{fetchError}</p>
-			)}
+			{categories.map(category => (
+				<Category
+					category={category}
+					key={category.id}
+				/>
+			))}
 		</section>
 	);
 }
