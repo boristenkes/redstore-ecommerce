@@ -31,14 +31,14 @@
 	}
 
 	&-navigation {
-		@include flex(center, $wrap: wrap);
-		gap: 1rem;
-		margin-top: 1rem;
+		@include flex($wrap: wrap);
+		margin-top: 0.5rem;
 		width: min(490px, 100%);
 		margin-inline: auto;
+		gap: 0.25rem;
 
 		label {
-			width: 100px;
+			flex: 1;
 			aspect-ratio: 1;
 			overflow: hidden;
 			cursor: pointer;
