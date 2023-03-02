@@ -18,10 +18,6 @@ export default function RelatedProducts({
 			if (product.name.includes(word) && product !== theProduct)
 				relationMeter++;
 		});
-		theProduct.description.split(' ').forEach(word => {
-			if (product.description.includes(word) && product !== theProduct)
-				relationMeter++;
-		});
 
 		if (relationMeter) relatedProducts.push(product);
 	});
