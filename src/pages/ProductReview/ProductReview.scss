@@ -18,20 +18,4 @@
 		--container-width: 1080px;
 		--padding: 10rem 1rem;
 	}
-	&-related {
-		@include flex($align: space-between, $direction: column);
-
-		&-head {
-			@include flex(space-between, center);
-			margin-bottom: 3rem;
-		}
-		h2 {
-			font-size: 1.5rem;
-		}
-		button {
-			background: transparent;
-			border: none;
-			font-family: var(--ff-button);
-		}
-	}
 }

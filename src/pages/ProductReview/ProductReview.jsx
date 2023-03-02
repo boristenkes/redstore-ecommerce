@@ -1,6 +1,6 @@
 import './ProductReview.scss';
 import { ProductImages, ProductDetails, Loader } from '../../components';
-import { Products } from '../../containers';
+import { RelatedProducts } from '../../containers';
 import { useParams } from 'react-router-dom';
 import { useFetch } from '../../hooks';
 
@@ -9,18 +9,6 @@ export default function ProductReview() {
 	const [products, fetchError, isLoading] = useFetch('/products');
 
 	const theProduct = products.find(product => product.id === id);
-	const relatedProducts = [];
-	let relationMeter = 0;
-
-	products.forEach(product => {
-		relationMeter = 0;
-		theProduct.name.split(' ').forEach(word => {
-			if (product.name.includes(word) && product !== theProduct)
-				relationMeter++;
-		});
-
-		if (relationMeter) relatedProducts.push(product);
-	});
 
 	return (
 		<section
@@ -34,17 +22,12 @@ export default function ProductReview() {
 						<ProductImages images={theProduct.album_images} />
 						<ProductDetails product={theProduct} />
 					</div>
-					<div className='product-review-related | section-padding'>
-						<div className='product-review-related-head'>
-							<h2 className='head-text'>Related Products</h2>
-							<button>View More</button>
-						</div>
-						<Products
-							products={relatedProducts.slice(0, 4)}
-							fetchError={fetchError}
-							isLoading={isLoading}
-						/>
-					</div>
+					<RelatedProducts
+						allProducts={products}
+						theProduct={theProduct}
+						fetchError={fetchError}
+						isLoading={isLoading}
+					/>
 				</>
 			) : (
 				<p style={{ color: 'red' }}>{fetchError}</p>
