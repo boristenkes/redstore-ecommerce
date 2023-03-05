@@ -1,0 +1,66 @@
+@use '../../scss/abstracts/' as *;
+
+.cart {
+	--container-width: 1080px;
+	--padding: 10rem;
+	min-height: 61vh;
+	&-table {
+		width: 100%;
+		text-align: left;
+
+		&-head {
+			background-color: var(--clr-primary-500);
+			color: #fff;
+			font: {
+				family: var(--ff-heading);
+				weight: var(--fw-medium);
+			}
+
+			th {
+				padding: 0.25rem 0.5rem;
+				&:last-child {
+					text-align: right;
+				}
+			}
+		}
+	}
+	&-total-table {
+		margin-left: auto;
+		font: {
+			family: var(--ff-primary);
+			weight: var(--fw-medium);
+		}
+		border-top: 3px solid var(--clr-primary-500);
+		width: min(400px, 100%);
+
+		thead {
+			display: grid;
+			gap: 1rem;
+			margin-top: 0.5rem;
+		}
+
+		tr {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	&-empty-message {
+		width: fit-content;
+		margin-left: 50%;
+		transform: translate(-50%, 100px);
+		color: var(--clr-neutral-600);
+		text-align: center;
+		font: {
+			family: var(--ff-heading);
+			size: 1.25rem;
+		}
+		a {
+			display: block;
+			font-size: 0.975rem;
+			margin-top: 1rem;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

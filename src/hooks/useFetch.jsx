@@ -10,9 +10,9 @@ export default function useFetch(dataUrl) {
 	useEffect(() => {
 		setIsLoading(true);
 
-		const fetchData = async url => {
+		(async () => {
 			try {
-				const response = await fetch(API_URL + url);
+				const response = await fetch(API_URL + dataUrl);
 				setData(await response.json());
 				setFetchError(null);
 			} catch (err) {
@@ -21,8 +21,7 @@ export default function useFetch(dataUrl) {
 			} finally {
 				setIsLoading(false);
 			}
-		};
-		fetchData(dataUrl);
+		})();
 	}, [dataUrl]);
 
 	return [data, fetchError, isLoading];

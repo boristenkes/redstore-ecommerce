@@ -22,6 +22,8 @@
 		}
 	}
 	.products {
-		justify-content: flex-start;
+		@include mq('phablet') {
+			justify-content: flex-start;
+		}
 	}
 }

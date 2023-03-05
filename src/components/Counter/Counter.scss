@@ -1,0 +1,39 @@
+@use '../../scss/abstracts/' as *;
+
+.counter {
+	width: 3ch;
+	text-align: center;
+	display: grid;
+	user-select: none;
+	font-family: var(--ff-primary);
+
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		display: none;
+	}
+	&-button {
+		display: grid;
+		place-items: center;
+		text-align: center;
+		aspect-ratio: 1;
+		width: 30px;
+		border-radius: 0.25rem;
+		&:hover {
+			background: var(--clr-neutral-200);
+		}
+	}
+	&-wrapper {
+		@include flex(space-between, center);
+		border: 1px solid var(--clr-primary-500);
+		padding: 0.5rem;
+		background-color: #fff;
+
+		> * {
+			border: none;
+			background: transparent;
+			font-size: 1.25rem;
+			user-select: none;
+			outline: none;
+		}
+	}
+}

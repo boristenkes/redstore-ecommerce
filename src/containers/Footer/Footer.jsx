@@ -42,7 +42,11 @@ export default function Footer() {
 				</div>
 
 				<div>
-					<Link aria-label='Home'>
+					<Link
+						aria-label='Home'
+						to='/'
+						onClick={() => window.scrollTo({ top: 0 })}
+					>
 						<Logo
 							className='footer-logo'
 							fillMain='var(--clr-neutral-100)'

@@ -1,6 +1,7 @@
 import Brand from './Brand/Brand';
 import Button from './Button/Button';
 import CartItem from './CartItem/CartItem';
+import Counter from './Counter/Counter';
 import Loader from './Loader/Loader';
 import LoginForm from './LoginForm/LoginForm';
 import Navbar from './Navbar/Navbar';
@@ -16,6 +17,7 @@ export {
 	Brand,
 	Button,
 	CartItem,
+	Counter,
 	Loader,
 	LoginForm,
 	Navbar,

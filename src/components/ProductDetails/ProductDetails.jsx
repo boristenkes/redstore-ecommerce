@@ -4,16 +4,35 @@ import DataContext from '../../context/DataContext';
 import { Button } from '../../components';
 import './ProductDetails.scss';
 import { ImIndentIncrease } from 'react-icons/im';
+import { Counter } from '../../components';
 
 export default function ProductDetails({ product }) {
-	const { currency } = useContext(DataContext);
+	const { LOCAL_STORAGE_CART_KEY, currency, cartItems, setCartItems } =
+		useContext(DataContext);
 	const [size, setSize] = useState('placeholder');
 	const [quantity, setQuantity] = useState(1);
 
+	const addToCart = e => {
+		e.preventDefault();
+		const newCartItem = {
+			id: product.id,
+			image: product.main_image,
+			name: product.name,
+			quantity: quantity,
+			price: product.price[currency],
+		};
+
+		setCartItems([...cartItems, newCartItem]);
+		localStorage.setItem(
+			LOCAL_STORAGE_CART_KEY,
+			JSON.stringify([...cartItems, newCartItem]),
+		);
+	};
+
 	return (
 		<form
-			onSubmit={e => e.preventDefault()}
 			className='product-details'
+			onSubmit={e => e.preventDefault()}
 		>
 			<p className='product-details-category'>Home / T-Shirt</p>
 			<h1 className='product-details-name | head-text'>{product.name}</h1>
@@ -42,30 +61,18 @@ export default function ProductDetails({ product }) {
 				))}
 			</select>
 			<div>
-				<div className='product-details-quantity-wrapper'>
-					<button
-						onClick={() => setQuantity(quantity === 1 ? 1 : quantity - 1)}
-						aria-label='Decrease quantity'
-					>
-						-
-					</button>
-					<input
-						type='number'
-						readOnly
-						inputMode='numeric'
-						title='Quantity'
-						pattern='[0-9]+'
-						value={quantity}
-						className='product-details-quantity'
-					/>
-					<button
-						onClick={() => setQuantity(quantity === 100 ? 100 : quantity + 1)}
-						aria-label='Increase quantity'
-					>
-						+
-					</button>
-				</div>
-				<Button type='submit'>Add To Cart</Button>
+				<Counter
+					value={quantity}
+					setValue={setQuantity}
+					label='quantity'
+				/>
+
+				<Button
+					type='submit'
+					onClick={addToCart}
+				>
+					Add To Cart
+				</Button>
 			</div>
 			<div>
 				<h2>Product Details </h2>

@@ -10,16 +10,14 @@ export default function RelatedProducts({
 }) {
 	const relatedProducts = [];
 	const [maxRelatedProducts, setMaxRelatedProducts] = useState(4);
-	let relationMeter = 0;
 
 	allProducts.forEach(product => {
-		relationMeter = 0;
-		theProduct.name.split(' ').forEach(word => {
-			if (product.name.includes(word) && product !== theProduct)
-				relationMeter++;
+		theProduct.name.split(' ').every(word => {
+			if (product.name.includes(word) && product !== theProduct) {
+				return relatedProducts.push(product);
+			}
+			return true;
 		});
-
-		if (relationMeter) relatedProducts.push(product);
 	});
 
 	return (
@@ -34,7 +32,7 @@ export default function RelatedProducts({
 				</button>
 			</div>
 			<Products
-				products={relatedProducts.slice(0, maxRelatedProducts)}
+				products={[...new Set(relatedProducts)].slice(0, maxRelatedProducts)}
 				fetchError={fetchError}
 				isLoading={isLoading}
 			/>

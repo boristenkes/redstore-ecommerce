@@ -4,11 +4,23 @@ import { Link } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import { Spin as Hamburger } from 'hamburger-react';
 import { ReactComponent as Cart } from '../../assets/cart.svg';
-import { useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
+import DataContext from '../../context/DataContext';
 
 export default function Navbar() {
 	const isDesktop = useMediaQuery({ query: '(min-width: 640px)' });
+	const navRef = useRef();
 	const [isOpen, setOpen] = useState(false);
+	const [scrollPosition, setScrollPosition] = useState(0);
+	const { cartItems } = useContext(DataContext);
+
+	useEffect(() => {
+		window.addEventListener('scroll', () => setScrollPosition(window.scrollY));
+
+		return window.removeEventListener('scroll', () =>
+			setScrollPosition(window.scrollY),
+		);
+	}, []);
 
 	const scrollToTop = () => {
 		setOpen(false);
@@ -16,7 +28,10 @@ export default function Navbar() {
 	};
 
 	return (
-		<header className='navbar | container'>
+		<header
+			className={`navbar | container ${scrollPosition > 75 ? 'with-bg' : ''}`}
+			ref={navRef}
+		>
 			<div className='navbar-logo'>
 				<Link
 					to='/'
@@ -67,7 +82,11 @@ export default function Navbar() {
 					to='/cart'
 					aria-label='Cart'
 					onClick={scrollToTop}
+					className='navbar-nav-cart'
 				>
+					{!!cartItems.length && (
+						<span className='cart-quantity'>{cartItems.length}</span>
+					)}
 					<Cart fill='var(--clr-neutral-900)' />
 				</Link>
 				{!isDesktop && (
