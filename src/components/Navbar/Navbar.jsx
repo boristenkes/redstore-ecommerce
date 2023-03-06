@@ -7,6 +7,29 @@ import { ReactComponent as Cart } from '../../assets/cart.svg';
 import { useContext, useEffect, useRef, useState } from 'react';
 import DataContext from '../../context/DataContext';
 
+const navLinks = [
+	{
+		title: 'Home',
+		to: '/',
+	},
+	{
+		title: 'Products',
+		to: '/products',
+	},
+	{
+		title: 'About',
+		to: '/about',
+	},
+	{
+		title: 'Contact',
+		to: '/contact',
+	},
+	{
+		title: 'Account',
+		to: '/account',
+	},
+];
+
 export default function Navbar() {
 	const isDesktop = useMediaQuery({ query: '(min-width: 640px)' });
 	const navRef = useRef();
@@ -47,36 +70,18 @@ export default function Navbar() {
 						isOpen ? 'active' : ''
 					}`}
 				>
-					<li
-						className='navbar-nav-item'
-						onClick={scrollToTop}
-					>
-						<Link to='/'>Home</Link>
-					</li>
-					<li
-						className='navbar-nav-item'
-						onClick={scrollToTop}
-					>
-						<Link to='/products'>Products</Link>
-					</li>
-					<li
-						className='navbar-nav-item'
-						onClick={scrollToTop}
-					>
-						<Link to='/about'>About</Link>
-					</li>
-					<li
-						className='navbar-nav-item'
-						onClick={scrollToTop}
-					>
-						<Link to='/contact'>Contact</Link>
-					</li>
-					<li
-						className='navbar-nav-item'
-						onClick={scrollToTop}
-					>
-						<Link to='/account'>Account</Link>
-					</li>
+					{navLinks.map((item, index) => (
+						<li
+							key={`navLink-${index + 1}`}
+							className='navbar-nav-item'
+							onClick={scrollToTop}
+							style={{
+								transitionDelay: index * 100 + 300 + 'ms',
+							}}
+						>
+							<Link to={item.to}>{item.title}</Link>
+						</li>
+					))}
 				</ul>
 				<Link
 					to='/cart'

@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import DataContext from '../../context/DataContext';
 import { Button } from '../../components';
@@ -22,11 +22,10 @@ export default function ProductDetails({ product }) {
 			price: product.price[currency],
 		};
 
-		setCartItems([...cartItems, newCartItem]);
-		localStorage.setItem(
-			LOCAL_STORAGE_CART_KEY,
-			JSON.stringify([...cartItems, newCartItem]),
-		);
+		const newCartItems = [...cartItems, newCartItem];
+
+		setCartItems(newCartItems);
+		localStorage.setItem(LOCAL_STORAGE_CART_KEY, JSON.stringify(newCartItems));
 	};
 
 	return (

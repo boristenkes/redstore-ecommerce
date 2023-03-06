@@ -15,7 +15,11 @@ export default function Product({ product }) {
 			>
 				<img
 					className='product-image'
-					src={product.main_image}
+					src={
+						'https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/' +
+						product.main_image +
+						'?raw=true'
+					}
 					alt={product.name}
 					loading='lazy'
 				/>

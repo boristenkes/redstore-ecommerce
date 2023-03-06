@@ -3,7 +3,7 @@ import { createContext, useState } from 'react';
 const DataContext = createContext({});
 
 export const DataProvider = ({ children }) => {
-	const LOCAL_STORAGE_CART_KEY = 'cart';
+	const LOCAL_STORAGE_CART_KEY = 'redstore_cart';
 	const [currentProducts, setCurrentProducts] = useState([]);
 	const [currentPage, setCurrentPage] = useState(0);
 	const [currency, setCurrency] = useState('usd');
