@@ -69,6 +69,7 @@ export default function Navbar() {
 					className={`navbar-nav-list ${!isDesktop ? 'mobile' : 'desktop'} ${
 						isOpen ? 'active' : ''
 					}`}
+					style={{ transitionDelay: (!isDesktop && isOpen ? 0 : 750) + 'ms' }}
 				>
 					{navLinks.map((item, index) => (
 						<li
@@ -76,7 +77,8 @@ export default function Navbar() {
 							className='navbar-nav-item'
 							onClick={scrollToTop}
 							style={{
-								transitionDelay: index * 100 + (isOpen ? 300 : 0) + 'ms',
+								transitionDelay: index * 100 + 300 + 'ms',
+								transform: `translateX(${!isOpen ? 500 : 0}%)`,
 							}}
 						>
 							<Link to={item.to}>{item.title}</Link>

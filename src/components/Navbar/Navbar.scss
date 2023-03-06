@@ -72,13 +72,15 @@
 				transform: translate(-50%, -50%);
 				font-size: 1.5rem;
 				transition: background, backdrop-filter, box-shadow, 500ms ease;
+				&:not(.active) {
+					visibility: hidden;
+				}
 
 				a {
 					color: var(--clr-neutral-100);
 				}
 
 				li {
-					transform: translateX(500%);
 					transition: transform 500ms ease;
 				}
 
@@ -86,10 +88,6 @@
 					background: rgba(2 2 2 / 0.5);
 					backdrop-filter: blur(1rem);
 					box-shadow: rgba(#111, 0.5) 0 0 0 10000px inset;
-
-					li {
-						transform: translateX(0);
-					}
 				}
 			}
 		}
