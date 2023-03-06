@@ -1,24 +1,24 @@
 @use '../../scss/abstracts/' as *;
 
-body {
-	&::before {
-		content: '';
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100vmax;
-		aspect-ratio: 1;
-		transition: background, backdrop-filter, 500ms ease;
-		z-index: 10;
-		visibility: hidden;
-	}
+// body {
+// 	&::before {
+// 		content: '';
+// 		position: fixed;
+// 		top: 0;
+// 		left: 0;
+// 		width: 100vmax;
+// 		aspect-ratio: 1;
+// 		transition: background, backdrop-filter, 500ms ease;
+// 		z-index: 10;
+// 		visibility: hidden;
+// 	}
 
-	&:has(.navbar-nav-list.active)::before {
-		background: rgba(200 200 200 / 0.5);
-		backdrop-filter: blur(3px);
-		visibility: visible;
-	}
-}
+// 	&:has(.navbar-nav-list.active)::before {
+// 		background: rgba(200 200 200 / 0.5);
+// 		backdrop-filter: blur(3px);
+// 		visibility: visible;
+// 	}
+// }
 
 .navbar {
 	@include flex(space-between, center);
@@ -63,40 +63,33 @@ body {
 			gap: 1.5rem;
 
 			&.mobile {
-				@include flex($direction: column);
+				@include flex(center, center, column);
 				position: fixed;
 				top: 50vh;
 				left: 50%;
-				transform: translate(-50%, -200%);
-				background: var(--clr-neutral-600);
-				padding: 7.5rem 5rem;
-				transition: transform, box-shadow, 750ms ease;
-				text-align: center;
-				width: 100%;
-				border-radius: 0.5rem;
+				width: 100vw;
+				height: 100vh;
+				transform: translate(-50%, -50%);
 				font-size: 1.5rem;
-				background-image: linear-gradient(
-					to bottom,
-					var(--clr-primary-500),
-					var(--clr-primary-700)
-				);
-				overflow: hidden;
-
-				li {
-					transition: transform 750ms ease;
-				}
-
-				&:not(.active) li {
-					transform: translateX(150%);
-				}
-
-				&.active {
-					transform: translate(-50%, -50%);
-					box-shadow: rgba(#111, 0.5) 0 0 0 10000px;
-				}
+				transition: background, backdrop-filter, box-shadow, 500ms ease;
 
 				a {
 					color: var(--clr-neutral-100);
+				}
+
+				li {
+					transform: translateX(500%);
+					transition: transform 500ms ease;
+				}
+
+				&.active {
+					background: rgba(2 2 2 / 0.5);
+					backdrop-filter: blur(1rem);
+					box-shadow: rgba(#111, 0.5) 0 0 0 10000px inset;
+
+					li {
+						transform: translateX(0);
+					}
 				}
 			}
 		}

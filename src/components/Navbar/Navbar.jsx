@@ -76,7 +76,7 @@ export default function Navbar() {
 							className='navbar-nav-item'
 							onClick={scrollToTop}
 							style={{
-								transitionDelay: index * 100 + 300 + 'ms',
+								transitionDelay: index * 100 + (isOpen ? 300 : 0) + 'ms',
 							}}
 						>
 							<Link to={item.to}>{item.title}</Link>
