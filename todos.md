@@ -2,8 +2,8 @@
 
 ## Navbar
 
-- [ ] Add active state for nav links
-- [ ] Add blur backdrop on mobile menu
+- [x] Add active state for nav links
+- [x] Add blur backdrop on mobile menu
 - [x] Fix z-index for cart icon
 
 ## CTA

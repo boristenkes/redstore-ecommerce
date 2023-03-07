@@ -1,25 +1,5 @@
 @use '../../scss/abstracts/' as *;
 
-// body {
-// 	&::before {
-// 		content: '';
-// 		position: fixed;
-// 		top: 0;
-// 		left: 0;
-// 		width: 100vmax;
-// 		aspect-ratio: 1;
-// 		transition: background, backdrop-filter, 500ms ease;
-// 		z-index: 10;
-// 		visibility: hidden;
-// 	}
-
-// 	&:has(.navbar-nav-list.active)::before {
-// 		background: rgba(200 200 200 / 0.5);
-// 		backdrop-filter: blur(3px);
-// 		visibility: visible;
-// 	}
-// }
-
 .navbar {
 	@include flex(space-between, center);
 	--container-width: 1250px;
@@ -89,6 +69,13 @@
 					backdrop-filter: blur(1rem);
 					box-shadow: rgba(#111, 0.5) 0 0 0 10000px inset;
 				}
+			}
+
+			a {
+				transition: color 250ms ease;
+			}
+			a.active {
+				color: var(--clr-primary-500);
 			}
 		}
 		&-cart {

@@ -1,48 +1,47 @@
 import './Navbar.scss';
 import { Logo } from '../../assets';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import { Spin as Hamburger } from 'hamburger-react';
 import { ReactComponent as Cart } from '../../assets/cart.svg';
-import { useContext, useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import DataContext from '../../context/DataContext';
 
 const navLinks = [
 	{
 		title: 'Home',
-		to: '/',
+		path: '/',
 	},
 	{
 		title: 'Products',
-		to: '/products',
+		path: '/products',
 	},
 	{
 		title: 'About',
-		to: '/about',
+		path: '/about',
 	},
 	{
 		title: 'Contact',
-		to: '/contact',
+		path: '/contact',
 	},
 	{
 		title: 'Account',
-		to: '/account',
+		path: '/account',
 	},
 ];
 
 export default function Navbar() {
 	const isDesktop = useMediaQuery({ query: '(min-width: 640px)' });
-	const navRef = useRef();
 	const [isOpen, setOpen] = useState(false);
 	const [scrollPosition, setScrollPosition] = useState(0);
 	const { cartItems } = useContext(DataContext);
 
-	useEffect(() => {
-		window.addEventListener('scroll', () => setScrollPosition(window.scrollY));
+	const handleScroll = () => setScrollPosition(window.scrollY);
 
-		return window.removeEventListener('scroll', () =>
-			setScrollPosition(window.scrollY),
-		);
+	useEffect(() => {
+		window.addEventListener('scroll', () => handleScroll);
+
+		return window.removeEventListener('scroll', () => handleScroll);
 	}, []);
 
 	const scrollToTop = () => {
@@ -53,7 +52,6 @@ export default function Navbar() {
 	return (
 		<header
 			className={`navbar | container ${scrollPosition > 75 ? 'with-bg' : ''}`}
-			ref={navRef}
 		>
 			<div className='navbar-logo'>
 				<Link
@@ -71,17 +69,17 @@ export default function Navbar() {
 					}`}
 					style={{ transitionDelay: (!isDesktop && isOpen ? 0 : 750) + 'ms' }}
 				>
-					{navLinks.map((item, index) => (
+					{navLinks.map((link, index) => (
 						<li
 							key={`navLink-${index + 1}`}
 							className='navbar-nav-item'
 							onClick={scrollToTop}
 							style={{
-								transitionDelay: index * 100 + 300 + 'ms',
-								transform: `translateX(${!isOpen ? 500 : 0}%)`,
+								transitionDelay: index * 100 + (isOpen ? 300 : 100) + 'ms',
+								transform: `translateX(${!isDesktop && !isOpen ? 500 : 0}%)`,
 							}}
 						>
-							<Link to={item.to}>{item.title}</Link>
+							<NavLink to={link.path}>{link.title}</NavLink>
 						</li>
 					))}
 				</ul>
@@ -101,7 +99,7 @@ export default function Navbar() {
 						<Hamburger
 							toggled={isOpen}
 							toggle={setOpen}
-							color={`var(--clr-neutral-${isOpen ? 1 : 9}00)`}
+							color={`var(--clr-neutral-${isOpen ? 1 : 8}00)`}
 							label='Toggle Menu'
 							rounded
 						/>
