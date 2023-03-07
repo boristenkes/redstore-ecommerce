@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 
-export default function useFetch(dataUrl) {
-	const API_URL =
-		'https://my-json-server.typicode.com/boristenkes/redstore-ecommerce';
+export default function useFetch(endpoint) {
+	const API_URL = 'https://6407a8c02f01352a8a810fd3.mockapi.io';
 	const [data, setData] = useState([]);
 	const [fetchError, setFetchError] = useState(null);
 	const [isLoading, setIsLoading] = useState(false);
@@ -12,7 +11,7 @@ export default function useFetch(dataUrl) {
 
 		(async () => {
 			try {
-				const response = await fetch(API_URL + dataUrl);
+				const response = await fetch(API_URL + endpoint);
 				setData(await response.json());
 				setFetchError(null);
 			} catch (err) {
@@ -22,7 +21,7 @@ export default function useFetch(dataUrl) {
 				setIsLoading(false);
 			}
 		})();
-	}, [dataUrl]);
+	}, [endpoint]);
 
 	return [data, fetchError, isLoading];
 }

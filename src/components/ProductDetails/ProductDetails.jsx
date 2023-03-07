@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import DataContext from '../../context/DataContext';
 import { Button } from '../../components';
@@ -15,7 +15,7 @@ export default function ProductDetails({ product }) {
 	const addToCart = e => {
 		e.preventDefault();
 		const newCartItem = {
-			id: product.id,
+			id: product._id,
 			image: product.main_image,
 			name: product.name,
 			quantity: quantity,

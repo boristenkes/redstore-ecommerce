@@ -1,7 +1,7 @@
 {
 	"products": [
 		{
-			"id": "8327df7c-7395-4110-b15a-abd212dbbfb2",
+			"_id": "8327df7c-7395-4110-b15a-abd212dbbfb2",
 			"main_image": "product-1.webp",
 			"album_images": [
 				"gallery-1.webp",
@@ -18,7 +18,7 @@
 			"featured": true
 		},
 		{
-			"id": "54caa77d-cee4-4556-8689-53c2e53631f3",
+			"_id": "54caa77d-cee4-4556-8689-53c2e53631f3",
 			"main_image": "product-2.webp",
 			"album_images": ["product-2.webp"],
 			"name": "Black Shoes",
@@ -30,7 +30,7 @@
 			"featured": true
 		},
 		{
-			"id": "9f6e5ee1-224d-4203-88f6-4aa1e6d7218e",
+			"_id": "9f6e5ee1-224d-4203-88f6-4aa1e6d7218e",
 			"main_image": "product-3.webp",
 			"album_images": ["product-3.webp"],
 			"name": "Gray Benetton Panths",
@@ -42,7 +42,7 @@
 			"featured": true
 		},
 		{
-			"id": "70a93ddb-f4a6-4ee7-b5b7-1aa1d32f9681",
+			"_id": "70a93ddb-f4a6-4ee7-b5b7-1aa1d32f9681",
 			"main_image": "product-4.webp",
 			"album_images": ["product-4.webp"],
 			"name": "Blue Puma T-Shirt",
@@ -54,7 +54,7 @@
 			"featured": true
 		},
 		{
-			"id": "40170c45-c283-4670-9633-c600f1f06017",
+			"_id": "40170c45-c283-4670-9633-c600f1f06017",
 			"main_image": "product-5.webp",
 			"album_images": ["product-5.webp"],
 			"name": "Grayish-White Shoes",
@@ -65,7 +65,7 @@
 			"sizes": ["L", "XL", "3XL", "S"]
 		},
 		{
-			"id": "26611d6e-b084-4ed3-8c81-2fda7e1dc284",
+			"_id": "26611d6e-b084-4ed3-8c81-2fda7e1dc284",
 			"main_image": "product-6.webp",
 			"album_images": ["product-6.webp"],
 			"name": "Black Puma T-Shirt",
@@ -76,7 +76,7 @@
 			"sizes": ["L", "M", "XL", "3XL", "S"]
 		},
 		{
-			"id": "340dd7cd-970e-4d28-816e-a00b05aad9b6",
+			"_id": "340dd7cd-970e-4d28-816e-a00b05aad9b6",
 			"main_image": "product-7.webp",
 			"album_images": ["product-7.webp"],
 			"name": "HRX Socks",
@@ -87,7 +87,7 @@
 			"sizes": ["L", "M", "XL", "S"]
 		},
 		{
-			"id": "607ed588-0228-4099-a868-4c69556356d4",
+			"_id": "607ed588-0228-4099-a868-4c69556356d4",
 			"main_image": "product-8.webp",
 			"album_images": ["product-8.webp"],
 			"name": "Black Fossil Watch",
@@ -98,7 +98,7 @@
 			"sizes": ["XS", "L", "M", "XL", "S"]
 		},
 		{
-			"id": "d3bcffbe-4bdd-4364-9969-eea801ea9275",
+			"_id": "d3bcffbe-4bdd-4364-9969-eea801ea9275",
 			"main_image": "product-9.webp",
 			"album_images": ["product-9.webp"],
 			"name": "Black Roadster Watch",
@@ -109,7 +109,7 @@
 			"sizes": ["L", "M", "XL", "3XL", "S"]
 		},
 		{
-			"id": "c4484027-1268-44c1-9426-0a5599120611",
+			"_id": "c4484027-1268-44c1-9426-0a5599120611",
 			"main_image": "product-10.webp",
 			"album_images": ["product-10.webp"],
 			"name": "Black HRX Shoes",
@@ -120,7 +120,7 @@
 			"sizes": ["L", "XL", "3XL", "S"]
 		},
 		{
-			"id": "d3ba1ad4-3f79-4b7e-884a-06ae29b1398e",
+			"_id": "d3ba1ad4-3f79-4b7e-884a-06ae29b1398e",
 			"main_image": "product-11.webp",
 			"album_images": ["product-11.webp"],
 			"name": "Gray Home Shoes",
@@ -131,7 +131,7 @@
 			"sizes": ["L", "M", "XL", "3XL"]
 		},
 		{
-			"id": "9c8d778e-26e3-4353-aed5-4575ee08af12",
+			"_id": "9c8d778e-26e3-4353-aed5-4575ee08af12",
 			"main_image": "product-12.webp",
 			"album_images": ["product-12.webp"],
 			"name": "Black Nike Panths",

@@ -10,7 +10,7 @@ export default function Product({ product }) {
 	return (
 		<article className='product'>
 			<Link
-				to={`/product/${product.id}`}
+				to={`/product/${product._id}`}
 				onClick={() => window.scrollTo({ top: 0 })}
 			>
 				<img

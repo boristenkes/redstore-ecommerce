@@ -8,7 +8,7 @@ export default function ProductReview() {
 	const { id } = useParams();
 	const [products, fetchError, isLoading] = useFetch('/products');
 
-	const theProduct = products.find(product => product.id === id);
+	const theProduct = products.find(product => product._id === id);
 
 	return (
 		<section

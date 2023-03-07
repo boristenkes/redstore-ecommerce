@@ -36,12 +36,12 @@ export default function Navbar() {
 	const [scrollPosition, setScrollPosition] = useState(0);
 	const { cartItems } = useContext(DataContext);
 
-	const handleScroll = () => setScrollPosition(window.scrollY);
-
 	useEffect(() => {
-		window.addEventListener('scroll', () => handleScroll);
+		window.addEventListener('scroll', () => setScrollPosition(window.scrollY));
 
-		return window.removeEventListener('scroll', () => handleScroll);
+		return window.removeEventListener('scroll', () =>
+			setScrollPosition(window.scrollY),
+		);
 	}, []);
 
 	const scrollToTop = () => {

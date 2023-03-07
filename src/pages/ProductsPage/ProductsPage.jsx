@@ -43,7 +43,7 @@ export default function ProductsPage() {
 				{!fetchError ? (
 					currentPageProducts.map(product => (
 						<Product
-							key={product.id}
+							key={product._id}
 							product={product}
 						/>
 					))
