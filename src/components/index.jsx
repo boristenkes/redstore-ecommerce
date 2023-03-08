@@ -11,7 +11,7 @@ import ProductDetails from './ProductDetails/ProductDetails';
 import ProductImages from './ProductImages/ProductImages';
 import SortBy from './SortBy/SortBy';
 import Testimonial from './Testimonial/Testimonial';
-import Total from './Total/Total';
+import TotalTable from './TotalTable/TotalTable';
 
 export {
 	Brand,
@@ -27,5 +27,5 @@ export {
 	ProductImages,
 	SortBy,
 	Testimonial,
-	Total,
+	TotalTable,
 };

@@ -17,12 +17,18 @@ export default function Header() {
 						Success isn't always about greatness. It's about consistency.
 						Consistent hard work gains success. Greatness will come.
 					</p>
-					<Button style={{ marginTop: '1.5rem' }} href='#'>
+					<Button
+						style={{ marginTop: '1.5rem' }}
+						href='#'
+					>
 						Explore Now &#10095;
 					</Button>
 				</div>
 				<div>
-					<img src={hero} alt='2 football players' loading='lazy' />
+					<img
+						src={hero}
+						alt='2 football players cheering'
+					/>
 				</div>
 			</div>
 		</header>

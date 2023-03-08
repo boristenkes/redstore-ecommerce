@@ -18,11 +18,7 @@ export default function ProductImages({ images }) {
 							}`}
 						>
 							<img
-								src={
-									'https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/' +
-									image +
-									'?raw=true'
-								}
+								src={`https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/${image}?raw=true`}
 								alt={`Product Image #${index + 1}`}
 								className='product-gallery-album-image'
 							/>
@@ -31,11 +27,7 @@ export default function ProductImages({ images }) {
 				</ul>
 			) : (
 				<img
-					src={
-						'https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/' +
-						images[0] +
-						'?raw=true'
-					}
+					src={`https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/${images[0]}?raw=true`}
 					alt='Only Product Image'
 					style={{
 						boxShadow: 'var(--album-shadow)',
@@ -61,11 +53,7 @@ export default function ProductImages({ images }) {
 								onChange={() => setActiveNavIndex(index)}
 							/>
 							<img
-								src={
-									'https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/' +
-									image +
-									'?raw=true'
-								}
+								src={`https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/${image}?raw=true`}
 								alt={`Navigation Image #${index + 1}`}
 							/>
 						</label>

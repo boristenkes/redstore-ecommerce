@@ -2,7 +2,10 @@ import './Brand.scss';
 
 export default function Brand({ brand }) {
 	return (
-		<a href={brand.link}>
+		<a
+			href={brand.link}
+			aria-label={brand.label}
+		>
 			<img
 				className='brand'
 				src={
@@ -11,7 +14,6 @@ export default function Brand({ brand }) {
 					'?raw=true'
 				}
 				alt={brand.label}
-				aria-label={brand.label}
 				loading='lazy'
 			/>
 		</a>

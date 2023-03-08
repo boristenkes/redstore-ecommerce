@@ -24,26 +24,6 @@
 			}
 		}
 	}
-	&-total-table {
-		margin-left: auto;
-		font: {
-			family: var(--ff-primary);
-			weight: var(--fw-medium);
-		}
-		border-top: 3px solid var(--clr-primary-500);
-		width: min(400px, 100%);
-
-		thead {
-			display: grid;
-			gap: 1rem;
-			margin-top: 0.5rem;
-		}
-
-		tr {
-			display: flex;
-			justify-content: space-between;
-		}
-	}
 	&-empty-message {
 		width: fit-content;
 		margin-left: 50%;

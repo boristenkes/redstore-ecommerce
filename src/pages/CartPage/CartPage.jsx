@@ -1,12 +1,11 @@
 import { useContext } from 'react';
 import './CartPage.scss';
 import DataContext from '../../context/DataContext';
-import { Button, CartItem } from '../../components';
+import { Button, CartItem, TotalTable } from '../../components';
 import { Link } from 'react-router-dom';
 
 export default function CartPage() {
-	const { cartItems, currency, shippingCost, subtotal, setSubtotal } =
-		useContext(DataContext);
+	const { cartItems } = useContext(DataContext);
 
 	return (
 		<section className='cart | container section-padding'>
@@ -34,31 +33,7 @@ export default function CartPage() {
 
 			{cartItems.length ? (
 				<>
-					<table className='cart-total-table'>
-						<thead>
-							<tr>
-								<th className='cart-total-table-label'>Subtotal</th>
-								<th className='cart-total-table-value'>
-									${subtotal.toFixed(2)}
-								</th>
-							</tr>
-							<tr>
-								<th className='cart-total-table-label'>Shipping</th>
-								<th className='cart-total-table-value'>
-									${shippingCost[currency].toFixed(2)}
-								</th>
-							</tr>
-							<tr>
-								<th className='cart-total-table-label'>Total</th>
-								<th
-									className='cart-total-table-value'
-									style={{ fontWeight: 'var(--fw-bold)' }}
-								>
-									${(subtotal + shippingCost[currency]).toFixed(2)}
-								</th>
-							</tr>
-						</thead>
-					</table>
+					<TotalTable />
 					<Button style={{ marginLeft: 'auto', marginTop: '2rem' }}>
 						Proceed To Checkout &#10095;
 					</Button>

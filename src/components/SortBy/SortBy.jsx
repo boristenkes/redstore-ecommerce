@@ -7,7 +7,7 @@ export default function SortBy() {
 
 	return (
 		<select
-			id='sort-by'
+			className='sort-by'
 			defaultValue='placeholder'
 			onChange={e => setSort(e.target.value)}
 		>
@@ -18,14 +18,54 @@ export default function SortBy() {
 			>
 				Sort By
 			</option>
-			<option value='name-asc'>Name &#8599;</option>
-			<option value='name-desc'>Name &#8600;</option>
-			<option value='rating-asc'>Rating &#8599;</option>
-			<option value='rating-desc'>Rating &#8600;</option>
-			<option value='price-asc'>Price &#8599;</option>
-			<option value='price-desc'>Price &#8600;</option>
-			<option value='date-asc'>Date &#8599;</option>
-			<option value='date-desc'>Date &#8600;</option>
+			<option
+				value='name-asc'
+				aria-label='Name - ascending'
+			>
+				Name &#8599;
+			</option>
+			<option
+				value='name-desc'
+				aria-label='Name - descending'
+			>
+				Name &#8600;
+			</option>
+			<option
+				value='rating-asc'
+				aria-label='Rating - ascending'
+			>
+				Rating &#8599;
+			</option>
+			<option
+				value='rating-desc'
+				aria-label='Rating - descending'
+			>
+				Rating &#8600;
+			</option>
+			<option
+				value='price-asc'
+				aria-label='Price - ascending'
+			>
+				Price &#8599;
+			</option>
+			<option
+				value='price-desc'
+				aria-label='Price - descending'
+			>
+				Price &#8600;
+			</option>
+			<option
+				value='date-asc'
+				aria-label='Date - ascending'
+			>
+				Date &#8599;
+			</option>
+			<option
+				value='date-desc'
+				aria-label='Date - descending'
+			>
+				Date &#8600;
+			</option>
 		</select>
 	);
 }

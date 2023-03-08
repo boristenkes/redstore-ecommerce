@@ -36,7 +36,10 @@ export default function Brands() {
 	];
 
 	return (
-		<section className='brands | container section-padding'>
+		<section
+			className='brands | container section-padding'
+			aria-label='Brands'
+		>
 			{brands.map(brand => (
 				<Brand
 					key={brand.id}

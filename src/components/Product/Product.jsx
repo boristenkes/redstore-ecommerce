@@ -1,5 +1,4 @@
 import './Product.scss';
-
 import { Link } from 'react-router-dom';
 import { useStars } from '../../hooks';
 import { useContext } from 'react';
@@ -15,18 +14,19 @@ export default function Product({ product }) {
 			>
 				<img
 					className='product-image'
-					src={
-						'https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/' +
-						product.main_image +
-						'?raw=true'
-					}
+					src={`https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/${product.main_image}?raw=true`}
 					alt={product.name}
 					loading='lazy'
 				/>
 				<div className='product-info-wrapper'>
 					<h3 className='product-name'>{product.name}</h3>
 					<div>
-						<ul className='product-rating'>{useStars(product.rating)}</ul>
+						<ul
+							className='product-rating'
+							aria-label={`Product rating: ${product.rating}/5`}
+						>
+							{useStars(product.rating)}
+						</ul>
 						<p className='product-price'>
 							${product.price[currency].toFixed(2)}
 						</p>

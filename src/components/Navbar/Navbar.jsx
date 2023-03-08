@@ -90,7 +90,12 @@ export default function Navbar() {
 					className='navbar-nav-cart'
 				>
 					{!!cartItems.length && (
-						<span className='cart-quantity'>{cartItems.length}</span>
+						<span
+							className='cart-quantity'
+							aria-label={`You have ${cartItems.length} items in your cart`}
+						>
+							{cartItems.length}
+						</span>
 					)}
 					<Cart fill='var(--clr-neutral-900)' />
 				</Link>

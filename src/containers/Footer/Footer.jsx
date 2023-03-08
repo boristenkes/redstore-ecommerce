@@ -22,6 +22,7 @@ export default function Footer() {
 							href='https://play.google.com/store/games'
 							className='footer-app-links-link'
 							target='_blank'
+							aria-label='Play Store link'
 						>
 							<img
 								src={playStore}
@@ -32,6 +33,7 @@ export default function Footer() {
 							href='https://www.apple.com/app-store/'
 							className='footer-app-links-link'
 							target='_blank'
+							aria-label='Apple Store link'
 						>
 							<img
 								src={appStore}
