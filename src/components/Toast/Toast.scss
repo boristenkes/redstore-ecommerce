@@ -1,0 +1,37 @@
+.toast {
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--clr-primary-500);
+	color: var(--clr-neutral-100);
+	box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+		rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+		rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+	width: min(350px, 100%);
+	height: min(75px, 100%);
+	overflow: hidden;
+	border-radius: 0.5rem;
+	transform: translateX(150%);
+	transition: transform 0.5s ease-in-out;
+
+	&.active {
+		transform: translateX(0);
+	}
+
+	&-text {
+		padding-left: 0.75rem;
+	}
+
+	&-close {
+		background: transparent;
+		border: none;
+		height: 100%;
+		background: var(--clr-primary-700);
+		padding-inline: 0.75rem;
+
+		svg {
+			fill: var(--clr-neutral-100);
+			font-size: 1.75rem;
+		}
+	}
+}

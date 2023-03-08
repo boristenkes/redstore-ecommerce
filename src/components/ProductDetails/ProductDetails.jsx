@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import DataContext from '../../context/DataContext';
-import { Button } from '../../components';
+import { Button, Toast } from '../../components';
 import './ProductDetails.scss';
 import { ImIndentIncrease } from 'react-icons/im';
 import { Counter } from '../../components';
@@ -11,6 +11,7 @@ export default function ProductDetails({ product }) {
 		useContext(DataContext);
 	const [size, setSize] = useState('placeholder');
 	const [quantity, setQuantity] = useState(1);
+	const [isToastActive, setIsToastActive] = useState(false);
 
 	const addToCart = e => {
 		e.preventDefault();
@@ -26,6 +27,8 @@ export default function ProductDetails({ product }) {
 
 		setCartItems(newCartItems);
 		localStorage.setItem(LOCAL_STORAGE_CART_KEY, JSON.stringify(newCartItems));
+
+		setIsToastActive(true);
 	};
 
 	return (
@@ -80,6 +83,11 @@ export default function ProductDetails({ product }) {
 			<p className='product-details-description | body-text'>
 				{product.description}
 			</p>
+			<Toast
+				text='Successfully added to cart'
+				isActive={isToastActive}
+				setIsActive={setIsToastActive}
+			/>
 		</form>
 	);
 }
