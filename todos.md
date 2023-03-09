@@ -8,7 +8,7 @@
 
 ## CTA
 
-- [ ] Add exclusive item to products
+- [x] Add exclusive item to products
 
 ## ProductImages
 
