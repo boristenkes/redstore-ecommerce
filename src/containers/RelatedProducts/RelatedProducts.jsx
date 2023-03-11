@@ -22,20 +22,28 @@ export default function RelatedProducts({
 
 	return (
 		<div className='product-review-related | section-padding'>
-			<div className='product-review-related-head'>
-				<h2 className='head-text'>Related Products</h2>
-				<button
-					disabled={maxRelatedProducts >= relatedProducts.length}
-					onClick={() => setMaxRelatedProducts(maxRelatedProducts + 4)}
-				>
-					View More
-				</button>
-			</div>
-			<Products
-				products={[...new Set(relatedProducts)].slice(0, maxRelatedProducts)}
-				fetchError={fetchError}
-				isLoading={isLoading}
-			/>
+			{!!relatedProducts.length && (
+				<>
+					<div className='product-review-related-head'>
+						<h2 className='head-text'>Related Products</h2>
+						<button
+							disabled={maxRelatedProducts >= relatedProducts.length}
+							onClick={() => setMaxRelatedProducts(maxRelatedProducts + 4)}
+						>
+							View More
+						</button>
+					</div>
+
+					<Products
+						products={[...new Set(relatedProducts)].slice(
+							0,
+							maxRelatedProducts,
+						)}
+						fetchError={fetchError}
+						isLoading={isLoading}
+					/>
+				</>
+			)}
 		</div>
 	);
 }

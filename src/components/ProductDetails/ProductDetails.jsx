@@ -1,20 +1,28 @@
 import { useContext, useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import DataContext from '../../context/DataContext';
-import { Button, Toast } from '../../components';
+import { Button } from '../../components';
 import './ProductDetails.scss';
 import { ImIndentIncrease } from 'react-icons/im';
 import { Counter } from '../../components';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 export default function ProductDetails({ product }) {
 	const { LOCAL_STORAGE_CART_KEY, currency, cartItems, setCartItems } =
 		useContext(DataContext);
 	const [size, setSize] = useState('placeholder');
 	const [quantity, setQuantity] = useState(1);
-	const [isToastActive, setIsToastActive] = useState(false);
+
+	const isItemAlreadyInCart = () => {
+		return cartItems.find(item => item.id === product._id);
+	};
 
 	const addToCart = e => {
 		e.preventDefault();
+		if (isItemAlreadyInCart())
+			return toast.error('Item is already in the cart.');
+
 		const newCartItem = {
 			id: product._id,
 			image: product.main_image,
@@ -28,7 +36,7 @@ export default function ProductDetails({ product }) {
 		setCartItems(newCartItems);
 		localStorage.setItem(LOCAL_STORAGE_CART_KEY, JSON.stringify(newCartItems));
 
-		setIsToastActive(true);
+		toast.success('Successfully added to the cart');
 	};
 
 	return (
@@ -37,7 +45,9 @@ export default function ProductDetails({ product }) {
 			onSubmit={e => e.preventDefault()}
 		>
 			<p className='product-details-category'>Home / T-Shirt</p>
-			<h1 className='product-details-name | head-text'>{product.name}</h1>
+			<h1 className='product-details-name | head-text'>
+				{product.name + (product.brand ? ` by ${product.brand}` : '')}
+			</h1>
 			<p className='product-details-price'>
 				${product.price[currency].toFixed(2)}
 			</p>
@@ -83,10 +93,13 @@ export default function ProductDetails({ product }) {
 			<p className='product-details-description | body-text'>
 				{product.description}
 			</p>
-			<Toast
-				text='Successfully added to cart'
-				isActive={isToastActive}
-				setIsActive={setIsToastActive}
+			<ToastContainer
+				className='toast'
+				position='bottom-right'
+				autoClose={3000}
+				pauseOnHover
+				newestOnTop={true}
+				hideProgressBar
 			/>
 		</form>
 	);

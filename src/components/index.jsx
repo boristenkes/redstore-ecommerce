@@ -12,7 +12,6 @@ import ProductImages from './ProductImages/ProductImages';
 import SortBy from './SortBy/SortBy';
 import Testimonial from './Testimonial/Testimonial';
 import TotalTable from './TotalTable/TotalTable';
-import Toast from './Toast/Toast';
 
 export {
 	Brand,
@@ -29,5 +28,4 @@ export {
 	SortBy,
 	Testimonial,
 	TotalTable,
-	Toast,
 };

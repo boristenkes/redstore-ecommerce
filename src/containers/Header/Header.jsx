@@ -2,6 +2,7 @@ import './Header.scss';
 import { useMediaQuery } from 'react-responsive';
 import { hero } from '../../assets';
 import { Button } from '../../components';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
 	const isDesktop = useMediaQuery({ query: '(min-width: 640px)' });
@@ -17,12 +18,11 @@ export default function Header() {
 						Success isn't always about greatness. It's about consistency.
 						Consistent hard work gains success. Greatness will come.
 					</p>
-					<Button
-						style={{ marginTop: '1.5rem' }}
-						href='#'
-					>
-						Explore Now &#10095;
-					</Button>
+					<Link to='/products'>
+						<Button onClick={() => window.scrollTo({ top: 0 })}>
+							Explore Now &#10095;
+						</Button>
+					</Link>
 				</div>
 				<div>
 					<img

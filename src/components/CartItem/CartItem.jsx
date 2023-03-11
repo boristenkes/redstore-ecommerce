@@ -36,7 +36,7 @@ export default function CartItem({ item, itemIndex }) {
 			<th className='cart-item-info'>
 				<Link to={`/product/${item.id}`}>
 					<img
-						src={`https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/${item.image}?raw=true`}
+						src={item.image}
 						alt={item.name}
 					/>
 				</Link>

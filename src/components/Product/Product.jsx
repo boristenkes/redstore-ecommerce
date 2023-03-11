@@ -14,9 +14,8 @@ export default function Product({ product }) {
 			>
 				<img
 					className='product-image'
-					src={`https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/${product.main_image}?raw=true`}
+					src={product.main_image}
 					alt={product.name}
-					loading='lazy'
 				/>
 				<div className='product-info-wrapper'>
 					<h3 className='product-name'>{product.name}</h3>

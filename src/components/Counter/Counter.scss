@@ -18,7 +18,8 @@
 		aspect-ratio: 1;
 		width: 30px;
 		border-radius: 0.25rem;
-		&:hover {
+		&:hover,
+		&:focus-visible {
 			background: var(--clr-neutral-200);
 		}
 	}

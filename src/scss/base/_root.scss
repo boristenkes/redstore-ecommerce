@@ -12,4 +12,5 @@
 	@each $label, $weight in $fontWeights {
 		--fw-#{$label}: #{$weight};
 	}
+	--section-gradient: radial-gradient(#fff, var(--clr-primary-100));
 }

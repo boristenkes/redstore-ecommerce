@@ -5,14 +5,11 @@ export default function Brand({ brand }) {
 		<a
 			href={brand.link}
 			aria-label={brand.label}
+			target='_blank'
 		>
 			<img
 				className='brand'
-				src={
-					'https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/' +
-					brand.logo +
-					'?raw=true'
-				}
+				src={brand.logo}
 				alt={brand.label}
 				loading='lazy'
 			/>

@@ -32,7 +32,7 @@ export default function ProductsPage() {
 	);
 
 	return (
-		<section className='all-products | container section-padding'>
+		<main className='all-products | container section-padding'>
 			<div className='all-products-header | container'>
 				<h1 className='head-text'>All Products</h1>
 				<SortBy />
@@ -53,6 +53,6 @@ export default function ProductsPage() {
 			</div>
 
 			<Pagination allProducts={products} />
-		</section>
+		</main>
 	);
 }

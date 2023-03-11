@@ -18,11 +18,7 @@ export default function Testimonial({ testimonial }) {
 			</ul>
 			<img
 				className='testimonial-avatar'
-				src={
-					'https://github.com/boristenkes/redstore-ecommerce/blob/main/src/assets/' +
-					testimonial.avatar +
-					'?raw=true'
-				}
+				src={testimonial.avatar}
 				alt={testimonial.name}
 				loading='lazy'
 			/>

@@ -20,9 +20,12 @@
 	}
 
 	&-name {
-		font-size: 1.25rem;
-		font-family: var(--ff-primary);
-		font-weight: var(--fw-medium);
+		font: {
+			size: 1.25rem;
+			family: var(--ff-primary);
+			weight: var(--fw-medium);
+		}
+		margin-top: 0.5rem;
 		color: var(--clr-neutral-600);
 		text-overflow: ellipsis;
 		overflow: hidden;
@@ -47,7 +50,8 @@
 
 	&-price {
 		font-family: var(--ff-primary);
-		font-weight: var(--fw-regular);
+		font-weight: var(--fw-medium);
+		font-size: 1.1rem;
 		color: var(--clr-neutral-600);
 	}
 }

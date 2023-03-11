@@ -8,7 +8,7 @@ export default function CartPage() {
 	const { cartItems } = useContext(DataContext);
 
 	return (
-		<section className='cart | container section-padding'>
+		<main className='cart | container section-padding'>
 			<table className='cart-table'>
 				<thead
 					style={{ position: 'sticky', top: 76, zIndex: 5 }}
@@ -44,6 +44,6 @@ export default function CartPage() {
 					<Link to='/'>Back to home page</Link>
 				</p>
 			)}
-		</section>
+		</main>
 	);
 }
