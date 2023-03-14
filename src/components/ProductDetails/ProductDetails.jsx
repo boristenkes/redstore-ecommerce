@@ -49,7 +49,7 @@ export default function ProductDetails({ product }) {
 				{product.name + (product.brand ? ` by ${product.brand}` : '')}
 			</h1>
 			<p className='product-details-price'>
-				${product.price[currency].toFixed(2)}
+				${(product.price[currency] * quantity).toFixed(2)}
 			</p>
 			<select
 				className='product-details-sizes'

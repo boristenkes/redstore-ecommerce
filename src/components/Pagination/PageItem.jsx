@@ -10,12 +10,13 @@ export default function PageItem({
 }) {
 	const { setCurrentPage } = useContext(ProductContext);
 	return (
-		<li className='pagination-item' {...props}>
+		<li
+			className='pagination-item'
+			{...props}
+		>
 			<button
 				className={`${isActive ? 'active' : ''}`}
-				onClick={() => {
-					setCurrentPage(to);
-				}}
+				onClick={() => setCurrentPage(to)}
 				disabled={isDisabled}
 			>
 				{children}

@@ -7,7 +7,7 @@ export const DataProvider = ({ children }) => {
 	const [currentProducts, setCurrentProducts] = useState([]);
 	const [currentPage, setCurrentPage] = useState(0);
 	const [currency, setCurrency] = useState('usd');
-	const [sort, setSort] = useState('date-asc');
+	const [sort, setSort] = useState('date-desc');
 	const [cartItems, setCartItems] = useState(
 		JSON.parse(localStorage.getItem(LOCAL_STORAGE_CART_KEY)) || [],
 	);
