@@ -6,6 +6,8 @@ import DataContext from '../../context/DataContext';
 
 export default function Product({ product }) {
 	const { currency } = useContext(DataContext);
+	const starRating = useStars(product.rating);
+
 	return (
 		<article className='product'>
 			<Link
@@ -24,7 +26,7 @@ export default function Product({ product }) {
 							className='product-rating'
 							aria-label={`Product rating: ${product.rating}/5`}
 						>
-							{useStars(product.rating)}
+							{starRating}
 						</ul>
 						<p className='product-price'>
 							${product.price[currency].toFixed(2)}

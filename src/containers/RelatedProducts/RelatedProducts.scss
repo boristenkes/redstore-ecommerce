@@ -1,7 +1,7 @@
 @use '../../scss/abstracts/' as *;
 
 .product-review-related {
-	@include flex($align: space, $direction: column);
+	@include flex($align: space-between, $direction: column);
 
 	&-head {
 		@include flex(space-between, center);
@@ -19,11 +19,6 @@
 		}
 		&:disabled {
 			cursor: not-allowed;
-		}
-	}
-	.products {
-		@include mq('phablet') {
-			justify-content: flex-start;
 		}
 	}
 }

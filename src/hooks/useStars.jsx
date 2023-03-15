@@ -5,11 +5,11 @@ import {
 } from 'react-icons/fa';
 
 export default function getStars(rating) {
-	let fullStars = Math.floor(rating);
-	let halfStars = rating % 1 >= 0.5 ? 1 : 0;
-	let emptyStars = 5 - fullStars - halfStars;
+	const fullStars = Math.floor(rating);
+	const halfStars = rating % 1 >= 0.5;
+	const emptyStars = 5 - fullStars - halfStars;
 
-	let stars = [];
+	const stars = [];
 	for (let i = 0; i < fullStars; i++) {
 		stars.push(
 			<li key={i}>

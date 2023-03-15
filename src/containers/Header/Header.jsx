@@ -28,6 +28,8 @@ export default function Header() {
 					<img
 						src={hero}
 						alt='2 football players cheering'
+						width={500}
+						height={500}
 					/>
 				</div>
 			</div>

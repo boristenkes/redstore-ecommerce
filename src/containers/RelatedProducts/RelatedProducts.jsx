@@ -11,14 +11,17 @@ export default function RelatedProducts({
 	const relatedProducts = [];
 	const [maxRelatedProducts, setMaxRelatedProducts] = useState(4);
 
-	allProducts.forEach(product => {
+	for (let product of allProducts) {
+		if (product === theProduct) continue;
+		if (product.brand === theProduct.brand) relatedProducts.push(product);
+
 		theProduct.name.split(' ').every(word => {
-			if (product.name.includes(word) && product !== theProduct) {
+			if (product.name.includes(word)) {
 				return relatedProducts.push(product);
 			}
 			return true;
 		});
-	});
+	}
 
 	return (
 		<div className='product-review-related | section-padding'>

@@ -2,6 +2,10 @@
 
 .products {
 	--container-width: 1080px;
-	@include flex(center, flex-end, $wrap: wrap);
+	position: relative; // for loader
+	@include flex($align: flex-end, $wrap: wrap);
+	@include mq('phablet', max) {
+		justify-content: center;
+	}
 	gap: 1rem;
 }

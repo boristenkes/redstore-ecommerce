@@ -1,15 +1,14 @@
 import { Loader, Product } from '../../components';
-import { v4 as uuid } from 'uuid';
 import './Products.scss';
 
 export default function Products({ products, fetchError, isLoading }) {
 	return (
 		<div className='products | container'>
-			{isLoading && <Loader />}
+			{isLoading && <Loader absolute />}
 			{!fetchError ? (
 				products.map(product => (
 					<Product
-						key={uuid()}
+						key={product._id}
 						product={product}
 					/>
 				))

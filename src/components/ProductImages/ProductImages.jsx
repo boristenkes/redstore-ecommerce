@@ -41,7 +41,7 @@ export default function ProductImages({ images }) {
 				<nav className='product-gallery-navigation'>
 					{images.map((image, index) => (
 						<label
-							key={uuid()}
+							key={`image-${index + 1}`}
 							htmlFor={`navigation-${index + 1}`}
 						>
 							<input
