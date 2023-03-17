@@ -1,0 +1,6 @@
+@use '../../../../scss/abstracts/' as *;
+
+.brands {
+	@include flex(space-around, center, $wrap: wrap);
+	gap: 2rem;
+}

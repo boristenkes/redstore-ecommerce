@@ -1,9 +1,7 @@
-import About from './About/About';
-import Account from './Account/Account';
-import CartPage from './CartPage/CartPage';
-import Contact from './Contact/Contact';
-import Home from './Home/Home';
-import ProductReview from './ProductReview/ProductReview';
-import ProductsPage from './ProductsPage/ProductsPage';
-
-export { About, Account, CartPage, Contact, Home, ProductReview, ProductsPage };
+export { default as About } from './About/About';
+export { default as Account } from './Account/Account';
+export { default as CartPage } from './CartPage/CartPage';
+export { default as Contact } from './Contact/Contact';
+export { default as Home } from './Home/Home';
+export { default as ProductReview } from './ProductReview/ProductReview';
+export { default as ProductsPage } from './ProductsPage/ProductsPage';

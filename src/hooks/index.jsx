@@ -1,4 +1,2 @@
-import useStars from './useStars';
-import useFetch from './useFetch';
-
-export { useStars, useFetch };
+export { default as useStars } from './useStars';
+export { default as useFetch } from './useFetch';

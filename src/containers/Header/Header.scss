@@ -20,6 +20,10 @@
 		width: fit-content;
 		border-radius: 100vmax;
 		margin-top: 1.5rem;
+
+		@include mq('tablet-small', max) {
+			margin-inline: auto;
+		}
 	}
 
 	img {

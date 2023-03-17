@@ -16,10 +16,7 @@ export default function PageItem({
 		>
 			<button
 				className={`${isActive ? 'active' : ''}`}
-				onClick={() => {
-					setCurrentPage(to);
-					window.scrollTo({ top: 0 });
-				}}
+				onClick={() => setCurrentPage(to)}
 				disabled={isDisabled}
 			>
 				{children}

@@ -1,0 +1,50 @@
+@use '../../../../scss/abstracts/' as *;
+
+.cta {
+	background: radial-gradient(#fff, var(--clr-primary-100));
+
+	&-wrapper {
+		--container-width: 1080px;
+		align-items: center;
+
+		div {
+			@include separate-children(2rem);
+		}
+
+		@include mq('tablet-wide', max) {
+			text-align: center;
+
+			* {
+				margin-inline: auto;
+			}
+		}
+	}
+	&-title {
+		font-size: 1.3rem;
+
+		&::before {
+			content: 'Exclusively Available on RedStore';
+			display: block;
+			font-family: var(--ff-primary);
+			font-size: 1.05rem;
+			font-weight: var(--fw-medium);
+			color: var(--clr-neutral-500);
+			margin-bottom: 1rem;
+		}
+	}
+
+	&-image {
+		width: min(400px, 80%);
+		margin-inline: auto;
+
+		@include mq('tablet-wide', max) {
+			margin-bottom: 3rem;
+		}
+	}
+
+	a {
+		display: block;
+		width: fit-content;
+		border-radius: 100vmax;
+	}
+}

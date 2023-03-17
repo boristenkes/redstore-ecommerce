@@ -7,8 +7,7 @@ import {
 	ProductReview,
 	ProductsPage,
 } from './pages';
-import { Navbar } from './components';
-import { Footer } from './containers';
+import { Navbar, Footer } from './layouts';
 import { Route, Routes } from 'react-router-dom';
 
 export default function App() {

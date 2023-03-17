@@ -1,10 +1,6 @@
 export { default as Brands } from './Brands/Brands';
-export { default as Cart } from './Cart/Cart';
 export { default as Categories } from './Categories/Categories';
 export { default as CTA } from './CTA/CTA';
 export { default as FeaturedProducts } from './FeaturedProducts/FeaturedProducts';
-export { default as Header } from './Header/Header';
 export { default as LatestProducts } from './LatestProducts/LatestProducts';
-export { default as Products } from './Products/Products';
-export { default as RelatedProducts } from './RelatedProducts/RelatedProducts';
 export { default as Testimonials } from './Testimonials/Testimonials';

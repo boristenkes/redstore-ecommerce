@@ -1,31 +1,13 @@
-import Brand from './Brand/Brand';
-import Button from './Button/Button';
-import CartItem from './CartItem/CartItem';
-import Counter from './Counter/Counter';
-import Loader from './Loader/Loader';
-import LoginForm from './LoginForm/LoginForm';
-import Navbar from './Navbar/Navbar';
-import Pagination from './Pagination/Pagination';
-import Product from './Product/Product';
-import ProductDetails from './ProductDetails/ProductDetails';
-import ProductImages from './ProductImages/ProductImages';
-import SortBy from './SortBy/SortBy';
-import Testimonial from './Testimonial/Testimonial';
-import TotalTable from './TotalTable/TotalTable';
-
-export {
-	Brand,
-	Button,
-	CartItem,
-	Counter,
-	Loader,
-	LoginForm,
-	Navbar,
-	Pagination,
-	Product,
-	ProductDetails,
-	ProductImages,
-	SortBy,
-	Testimonial,
-	TotalTable,
-};
+export { default as Brand } from './Brand/Brand';
+export { default as Button } from './Button/Button';
+export { default as CartItem } from './CartItem/CartItem';
+export { default as Counter } from './Counter/Counter';
+export { default as Loader } from './Loader/Loader';
+export { default as LoginForm } from './LoginForm/LoginForm';
+export { default as Pagination } from './Pagination/Pagination';
+export { default as Product } from './Product/Product';
+export { default as ProductDetails } from './ProductDetails/ProductDetails';
+export { default as ProductImages } from './ProductImages/ProductImages';
+export { default as SortBy } from './SortBy/SortBy';
+export { default as Testimonial } from './Testimonial/Testimonial';
+export { default as TotalTable } from './TotalTable/TotalTable';

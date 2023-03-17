@@ -1,0 +1,8 @@
+.brand {
+	filter: grayscale(100%);
+	transition: filter 0.25s ease-in-out;
+
+	&:hover {
+		filter: grayscale(0);
+	}
+}

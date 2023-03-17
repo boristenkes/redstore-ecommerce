@@ -1,0 +1,41 @@
+@use '../../../../../scss/abstracts/' as *;
+
+.testimonial {
+	padding: 1.5rem;
+	box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+	text-align: center;
+	transition: transform 0.25s ease-in-out;
+	width: min(350px, 100%);
+
+	&:hover {
+		transform: translateY(-0.5rem);
+	}
+
+	&-quote {
+		fill: var(--clr-primary-500);
+		font-size: 2rem;
+		margin: 1.5rem auto;
+	}
+	&-feedback {
+		font-size: 0.9rem !important;
+	}
+	&-rating {
+		@include flex(center, center);
+		gap: 0.25rem;
+		color: var(--clr-primary-500);
+		font-size: 1.15rem;
+		margin-block: 1rem;
+	}
+	&-avatar {
+		width: 3.125rem;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		margin-inline: auto;
+	}
+	&-name {
+		font-family: var(--ff-primary);
+		font-weight: var(--fw-semibold);
+		font-size: 1.15rem;
+		margin-top: 1rem;
+	}
+}

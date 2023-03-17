@@ -1,0 +1,14 @@
+.account {
+	background-image: var(--section-gradient);
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+	position: relative;
+
+	&-right {
+		display: grid;
+		place-items: center;
+		min-height: 50vh;
+		margin-bottom: 5rem;
+	}
+}
