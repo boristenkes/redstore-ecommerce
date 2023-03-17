@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 export default function useFetch(endpoint) {
-	const API_URL = import.meta.env.NETLIFY_BASE_API_URL;
+	const API_URL = process.env.VITE_BASE_API_URL;
 	const [data, setData] = useState([]);
 	const [fetchError, setFetchError] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
