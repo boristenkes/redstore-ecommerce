@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 const DataContext = createContext({});
 
@@ -11,15 +11,16 @@ export const DataProvider = ({ children }) => {
 	const [cartItems, setCartItems] = useState(
 		JSON.parse(localStorage.getItem(LOCAL_STORAGE_CART_KEY)) || [],
 	);
-	const shippingCost = {
-		usd: 30,
-	};
+	const shippingCost = { usd: 30 };
 	const [subtotal, setSubtotal] = useState(0);
+
+	useEffect(() => {
+		localStorage.setItem(LOCAL_STORAGE_CART_KEY, JSON.stringify(cartItems));
+	}, [cartItems]);
 
 	return (
 		<DataContext.Provider
 			value={{
-				LOCAL_STORAGE_CART_KEY,
 				currentProducts,
 				setCurrentProducts,
 				currentPage,

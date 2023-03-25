@@ -8,8 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
 export default function ProductDetails({ product }) {
-	const { LOCAL_STORAGE_CART_KEY, currency, cartItems, setCartItems } =
-		useContext(DataContext);
+	const { currency, cartItems, setCartItems } = useContext(DataContext);
 	const [size, setSize] = useState('placeholder');
 	const [quantity, setQuantity] = useState(1);
 
@@ -33,7 +32,6 @@ export default function ProductDetails({ product }) {
 		const newCartItems = [...cartItems, newCartItem];
 
 		setCartItems(newCartItems);
-		localStorage.setItem(LOCAL_STORAGE_CART_KEY, JSON.stringify(newCartItems));
 
 		toast.success('Successfully added to the cart');
 	};

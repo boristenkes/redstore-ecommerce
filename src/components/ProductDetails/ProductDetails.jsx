@@ -1,5 +1,4 @@
-import { useContext, useState } from 'react';
-import { v4 as uuid } from 'uuid';
+import { useContext, useEffect, useState } from 'react';
 import DataContext from '../../context/DataContext';
 import { Button } from '../../components';
 import './ProductDetails.scss';
@@ -7,21 +6,23 @@ import { ImIndentIncrease } from 'react-icons/im';
 import { Counter } from '../../components';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
+import { useParams } from 'react-router-dom';
 
 export default function ProductDetails({ product }) {
-	const { LOCAL_STORAGE_CART_KEY, currency, cartItems, setCartItems } =
-		useContext(DataContext);
+	const { id } = useParams();
+	const { currency, cartItems, setCartItems } = useContext(DataContext);
 	const [size, setSize] = useState('placeholder');
 	const [quantity, setQuantity] = useState(1);
 
-	const isItemAlreadyInCart = () => {
-		return cartItems.find(item => item.id === product._id);
-	};
+	useEffect(() => {
+		setQuantity(1);
+	}, [id]);
+
+	const isItemAlreadyInCart = cartItems.some(item => item.id === product._id);
 
 	const addToCart = e => {
 		e.preventDefault();
-		if (isItemAlreadyInCart())
-			return toast.error('Item is already in the cart.');
+		if (isItemAlreadyInCart) return toast.error('Item is already in the cart.');
 
 		const newCartItem = {
 			id: product._id,
@@ -34,7 +35,6 @@ export default function ProductDetails({ product }) {
 		const newCartItems = [...cartItems, newCartItem];
 
 		setCartItems(newCartItems);
-		localStorage.setItem(LOCAL_STORAGE_CART_KEY, JSON.stringify(newCartItems));
 
 		toast.success('Successfully added to the cart');
 	};
@@ -99,7 +99,7 @@ export default function ProductDetails({ product }) {
 				autoClose={3000}
 				pauseOnHover
 				newestOnTop={true}
-				hideProgressBar
+				// hideProgressBar
 			/>
 		</form>
 	);

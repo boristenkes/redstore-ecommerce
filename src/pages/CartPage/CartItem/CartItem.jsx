@@ -7,8 +7,7 @@ import './CartItem.scss';
 
 export default function CartItem({ item, itemIndex }) {
 	const isSmallScreen = useMediaQuery({ query: '(max-width: 425px)' });
-	const { LOCAL_STORAGE_CART_KEY, cartItems, setCartItems, setSubtotal } =
-		useContext(DataContext);
+	const { cartItems, setCartItems, setSubtotal } = useContext(DataContext);
 	const [quantity, setQuantity] = useState(item.quantity);
 	const [itemTotal, setItemTotal] = useState(quantity * item.price);
 
@@ -18,7 +17,6 @@ export default function CartItem({ item, itemIndex }) {
 		);
 
 		setCartItems(filteredItems);
-		localStorage.setItem(LOCAL_STORAGE_CART_KEY, JSON.stringify(filteredItems));
 	};
 
 	useEffect(() => {

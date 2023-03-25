@@ -9,7 +9,7 @@ export default function Account() {
 
 	return (
 		<main className='account'>
-			<div className='account-wrapper | container even-columns'>
+			<div className='account-wrapper | container even-columns section-padding'>
 				<div className='account-left'>
 					<img
 						src={hero}

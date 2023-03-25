@@ -1,6 +1,7 @@
 import './RelatedProducts.scss';
 import Products from '../Products/Products';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 export default function RelatedProducts({
 	allProducts,
@@ -8,8 +9,13 @@ export default function RelatedProducts({
 	fetchError,
 	isLoading,
 }) {
+	const { id } = useParams();
 	const relatedProducts = [];
 	const [maxRelatedProducts, setMaxRelatedProducts] = useState(4);
+
+	useEffect(() => {
+		setMaxRelatedProducts(4);
+	}, [id]);
 
 	for (let product of allProducts) {
 		if (product === theProduct) continue;

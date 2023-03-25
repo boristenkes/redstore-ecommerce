@@ -107,6 +107,7 @@
 
 	a {
 		color: var(--clr-neutral-500);
+		transition-duration: 0ms;
 		&:hover {
 			color: var(--clr-primary-500);
 			svg {

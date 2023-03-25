@@ -16,7 +16,7 @@
 
 ## ProductDetails
 
-- [ ] Reset counter to 0 when moving to other products
+- [x] Reset counter to 0 when moving to other products
 - [x] Send toast notification confirming item is added to the cart
 
 ## CartPage
