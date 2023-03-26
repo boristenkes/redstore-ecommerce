@@ -5,7 +5,7 @@ import './ProductDetails.scss';
 import { ImIndentIncrease } from 'react-icons/im';
 import { Counter } from '../../components';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.min.css';
+import 'react-toastify/dist/ReactToastify.css';
 import { useParams } from 'react-router-dom';
 
 export default function ProductDetails({ product }) {
@@ -99,7 +99,7 @@ export default function ProductDetails({ product }) {
 				autoClose={3000}
 				pauseOnHover
 				newestOnTop={true}
-				// hideProgressBar
+				hideProgressBar
 			/>
 		</form>
 	);

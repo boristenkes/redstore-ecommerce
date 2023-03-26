@@ -23,7 +23,7 @@
 		border: 1px solid var(--clr-primary-500);
 		padding: 0.5rem;
 	}
-	div {
+	> div {
 		display: flex;
 		gap: 1rem;
 		align-items: center;
@@ -59,6 +59,7 @@
 				rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 			background-color: var(--clr-primary-500);
 			color: #fff;
+			margin-block: 0.25rem;
 		}
 	}
 }
