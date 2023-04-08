@@ -15,7 +15,7 @@
 		border: none;
 		font-family: var(--ff-button);
 		&:hover:not(:disabled) {
-			text-decoration: underline;
+			color: var(--clr-neutral-400);
 		}
 		&:disabled {
 			cursor: not-allowed;

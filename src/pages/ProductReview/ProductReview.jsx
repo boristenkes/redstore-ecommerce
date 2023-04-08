@@ -6,9 +6,8 @@ import { useFetch } from '../../hooks';
 
 export default function ProductReview() {
 	const { id } = useParams();
-	const [products, fetchError, isLoading] = useFetch('/products');
-
-	const theProduct = products.find(product => product._id === id);
+	const [data, fetchError, isLoading] = useFetch(`/products?_id=${id}`);
+	const product = data[0];
 
 	return (
 		<section
@@ -16,18 +15,13 @@ export default function ProductReview() {
 			style={{ minHeight: '80vh' }}
 		>
 			{isLoading && <Loader absolute />}
-			{!fetchError && products.length ? (
+			{!fetchError && product ? (
 				<>
 					<div className='product-review'>
-						<ProductImages images={theProduct.album_images} />
-						<ProductDetails product={theProduct} />
+						<ProductImages images={product.album_images} />
+						<ProductDetails product={product} />
 					</div>
-					<RelatedProducts
-						allProducts={products}
-						theProduct={theProduct}
-						fetchError={fetchError}
-						isLoading={isLoading}
-					/>
+					<RelatedProducts theProduct={product} />
 				</>
 			) : (
 				<p style={{ color: 'red' }}>{fetchError}</p>

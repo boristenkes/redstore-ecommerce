@@ -5,7 +5,7 @@ import './ProductDetails.scss';
 import { ImIndentIncrease } from 'react-icons/im';
 import { Counter } from '../../components';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.min.css';
 import { useParams } from 'react-router-dom';
 
 export default function ProductDetails({ product }) {
@@ -16,6 +16,7 @@ export default function ProductDetails({ product }) {
 
 	useEffect(() => {
 		setQuantity(1);
+		setSize('placeholder');
 	}, [id]);
 
 	const isItemAlreadyInCart = cartItems.some(item => item.id === product._id);
@@ -23,6 +24,7 @@ export default function ProductDetails({ product }) {
 	const addToCart = e => {
 		e.preventDefault();
 		if (isItemAlreadyInCart) return toast.error('Item is already in the cart.');
+		if (size === 'placeholder') return toast.error('Select product size!');
 
 		const newCartItem = {
 			id: product._id,
@@ -30,10 +32,10 @@ export default function ProductDetails({ product }) {
 			name: product.name,
 			quantity: quantity,
 			price: product.price[currency],
+			size: size
 		};
 
 		const newCartItems = [...cartItems, newCartItem];
-
 		setCartItems(newCartItems);
 
 		toast.success('Successfully added to the cart');

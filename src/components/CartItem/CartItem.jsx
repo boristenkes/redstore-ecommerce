@@ -13,7 +13,7 @@ export default function CartItem({ item, itemIndex }) {
 
 	const removeItem = () => {
 		const filteredItems = cartItems.filter(
-			item => item.id !== cartItems[itemIndex].id,
+			item => item.id !== cartItems[itemIndex].id
 		);
 
 		setCartItems(filteredItems);
@@ -22,12 +22,20 @@ export default function CartItem({ item, itemIndex }) {
 	useEffect(() => {
 		item.quantity = quantity;
 
+		setItemTotal(item.price * item.quantity);
+
+		const updatedCartItems = cartItems.map(cartItem =>
+			cartItem.id === item.id ? { ...cartItem, quantity: quantity } : cartItem
+		);
+		setCartItems(updatedCartItems);
+	}, [quantity]);
+
+	useEffect(() => {
 		const newSubtotal = cartItems.reduce((acc, item) => {
 			return acc + item.price * item.quantity;
 		}, 0);
 		setSubtotal(newSubtotal);
-		setItemTotal(item.price * item.quantity);
-	}, [quantity]);
+	}, [cartItems.length, quantity]);
 
 	return (
 		<tr className='cart-item'>
@@ -41,7 +49,9 @@ export default function CartItem({ item, itemIndex }) {
 				<div>
 					<Link to={`/product/${item.id}`}>
 						{!isSmallScreen && <h2>{item.name}</h2>}
-						<p>${item.price.toFixed(2)}</p>
+						<p>
+							${item.price.toFixed(2)} • {item.size}
+						</p>
 					</Link>
 					<button onClick={removeItem}>Remove</button>
 				</div>
@@ -52,7 +62,7 @@ export default function CartItem({ item, itemIndex }) {
 					setValue={setQuantity}
 					label='quantity'
 					style={{
-						width: 'fit-content',
+						width: 'fit-content'
 					}}
 				/>
 			</th>

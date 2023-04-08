@@ -3,6 +3,44 @@ import { Logo, playStore, appStore } from '../../assets';
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
 
+const usefulLinks = [
+	{
+		title: 'Coupons',
+		link: '#'
+	},
+	{
+		title: 'Blog Post',
+		link: '#'
+	},
+	{
+		title: 'Return Policy',
+		link: '#'
+	},
+	{
+		title: 'Join Affiliate',
+		link: '#'
+	}
+];
+
+const socials = [
+	{
+		title: 'Facebook',
+		link: 'https://www.facebook.com/'
+	},
+	{
+		title: 'Twitter',
+		link: 'https://www.twitter.com/'
+	},
+	{
+		title: 'Instagram',
+		link: 'https://www.instagram.com/'
+	},
+	{
+		title: 'YouTube',
+		link: 'https://www.youtube.com/'
+	}
+];
+
 export default function Footer() {
 	const isDesktop = useMediaQuery({ query: '(min-width: 640px)' });
 
@@ -22,22 +60,22 @@ export default function Footer() {
 							href='https://play.google.com/store/games'
 							className='footer-app-links-link'
 							target='_blank'
-							aria-label='Play Store link'
+							aria-label='Play Store'
 						>
 							<img
 								src={playStore}
-								alt='Play Store link'
+								alt='Play Store'
 							/>
 						</a>
 						<a
 							href='https://www.apple.com/app-store/'
 							className='footer-app-links-link'
 							target='_blank'
-							aria-label='Apple Store link'
+							aria-label='Apple Store'
 						>
 							<img
 								src={appStore}
-								alt='Apple Store link'
+								alt='Apple Store'
 							/>
 						</a>
 					</div>
@@ -64,75 +102,32 @@ export default function Footer() {
 					<div className='footer-links'>
 						<h3 className='footer-title'>Useful Links</h3>
 						<ul className='footer-links-list'>
-							<li>
-								<a
-									className='footer-paragraph | body-text'
-									href='#'
-								>
-									Coupons
-								</a>
-							</li>
-							<li>
-								<a
-									className='footer-paragraph | body-text'
-									href='#'
-								>
-									Blog Post
-								</a>
-							</li>
-							<li>
-								<a
-									className='footer-paragraph | body-text'
-									href='#'
-								>
-									Return Policy
-								</a>
-							</li>
-							<li>
-								<a
-									className='footer-paragraph | body-text'
-									href='#'
-								>
-									Join Affiliate
-								</a>
-							</li>
+							{usefulLinks.map(link => (
+								<li key={link.title}>
+									<a
+										className='footer-paragraph | body-text'
+										href={link.link}
+										target='_blank'
+									>
+										{link.title}
+									</a>
+								</li>
+							))}
 						</ul>
 					</div>
 					<div className='footer-links'>
 						<h3 className='footer-title'>Follow Us</h3>
 						<ul className='footer-links-list'>
-							<li>
-								<a
-									className='footer-paragraph | body-text'
-									href='https://www.facebook.com/'
-								>
-									Facebook
-								</a>
-							</li>
-							<li>
-								<a
-									className='footer-paragraph | body-text'
-									href='https://www.twitter.com/'
-								>
-									Twitter
-								</a>
-							</li>
-							<li>
-								<a
-									className='footer-paragraph | body-text'
-									href='https://www.instagram.com/'
-								>
-									Instagram
-								</a>
-							</li>
-							<li>
-								<a
-									className='footer-paragraph | body-text'
-									href='https://www.youtube.com/'
-								>
-									YouTube
-								</a>
-							</li>
+							{socials.map(social => (
+								<li key={social.title}>
+									<a
+										className='footer-paragraph | body-text'
+										href={social.link}
+									>
+										{social.title}
+									</a>
+								</li>
+							))}
 						</ul>
 					</div>
 				</div>

@@ -3,9 +3,9 @@ import { Products } from '../../containers';
 import { useFetch } from '../../hooks';
 
 export default function FeaturedProducts() {
-	const [products, fetchError, isLoading] = useFetch('/products');
-
-	const featuredProducts = products.filter(product => product.featured);
+	const [featuredProducts, fetchError, isLoading] = useFetch(
+		'/products?featured=true',
+	);
 
 	return (
 		<section className='container section-padding'>

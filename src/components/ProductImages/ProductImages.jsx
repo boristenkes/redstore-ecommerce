@@ -1,5 +1,4 @@
 import './ProductImages.scss';
-import { v4 as uuid } from 'uuid';
 import { useState } from 'react';
 
 export default function ProductImages({ images }) {
@@ -32,7 +31,7 @@ export default function ProductImages({ images }) {
 					style={{
 						boxShadow: 'var(--album-shadow)',
 						borderRadius: '.25rem',
-						backgroundColor: 'var(--clr-neutral-100)',
+						backgroundColor: 'var(--clr-neutral-100)'
 					}}
 				/>
 			)}

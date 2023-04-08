@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Button = styled.button`
 	font-family: var(--ff-button);
 	background: var(--clr-primary-500);
-	color: var(--clr-neutral-100);
+	color: #fff;
 	padding: 0.5rem 1.875rem;
 	border-radius: 100vmax;
 	display: block;

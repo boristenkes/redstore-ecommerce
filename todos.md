@@ -21,4 +21,4 @@
 
 ## CartPage
 
-- [ ] Add product size to cart item
+- [x] Add product size to cart item

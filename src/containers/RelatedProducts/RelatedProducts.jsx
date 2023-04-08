@@ -2,14 +2,11 @@ import './RelatedProducts.scss';
 import Products from '../Products/Products';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useFetch } from '../../hooks';
 
-export default function RelatedProducts({
-	allProducts,
-	theProduct,
-	fetchError,
-	isLoading,
-}) {
+export default function RelatedProducts({ theProduct }) {
 	const { id } = useParams();
+	const [products, fetchError, isLoading] = useFetch('/products');
 	const relatedProducts = [];
 	const [maxRelatedProducts, setMaxRelatedProducts] = useState(4);
 
@@ -17,16 +14,18 @@ export default function RelatedProducts({
 		setMaxRelatedProducts(4);
 	}, [id]);
 
-	for (let product of allProducts) {
-		if (product === theProduct) continue;
-		if (product.brand === theProduct.brand) relatedProducts.push(product);
+	for (let product of products) {
+		if (product.id === theProduct.id) continue;
+		if (product.brand === theProduct.brand) {
+			relatedProducts.push(product);
+			continue;
+		}
 
-		theProduct.name.split(' ').every(word => {
-			if (product.name.includes(word)) {
-				return relatedProducts.push(product);
-			}
-			return true;
-		});
+		theProduct.name
+			.split(' ')
+			.every(word =>
+				product.name.includes(word) ? relatedProducts.push(product) : true
+			);
 	}
 
 	return (
@@ -46,7 +45,7 @@ export default function RelatedProducts({
 					<Products
 						products={[...new Set(relatedProducts)].slice(
 							0,
-							maxRelatedProducts,
+							maxRelatedProducts
 						)}
 						fetchError={fetchError}
 						isLoading={isLoading}

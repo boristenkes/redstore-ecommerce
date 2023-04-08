@@ -12,7 +12,7 @@ export default function Testimonial({ testimonial }) {
 			<p className='testimonial-feedback | body-text'>{testimonial.feedback}</p>
 			<ul
 				className='testimonial-rating'
-				aria-label={`Post rating: ${testimonial.rating}/5`}
+				aria-label={`Testimonial rating: ${testimonial.rating}/5`}
 			>
 				{useStars(testimonial.rating)}
 			</ul>
