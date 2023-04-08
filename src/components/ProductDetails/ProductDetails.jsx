@@ -19,7 +19,9 @@ export default function ProductDetails({ product }) {
 		setSize('placeholder');
 	}, [id]);
 
-	const isItemAlreadyInCart = cartItems.some(item => item.id === product._id);
+	const isItemAlreadyInCart = cartItems.some(
+		item => item.id === product._id && item.size === size
+	);
 
 	const addToCart = e => {
 		e.preventDefault();

@@ -13,7 +13,9 @@ export default function CartItem({ item, itemIndex }) {
 
 	const removeItem = () => {
 		const filteredItems = cartItems.filter(
-			item => item.id !== cartItems[itemIndex].id
+			item =>
+				item.id !== cartItems[itemIndex].id ||
+				item.size !== cartItems[itemIndex].size
 		);
 
 		setCartItems(filteredItems);
