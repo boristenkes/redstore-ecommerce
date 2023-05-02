@@ -10,24 +10,24 @@ import DataContext from '../../context/DataContext';
 const navLinks = [
 	{
 		title: 'Home',
-		path: '/',
+		path: '/'
 	},
 	{
 		title: 'Products',
-		path: '/products',
+		path: '/products'
 	},
 	{
 		title: 'About',
-		path: '/about',
+		path: '/about'
 	},
 	{
 		title: 'Contact',
-		path: '/contact',
+		path: '/contact'
 	},
 	{
 		title: 'Account',
-		path: '/account',
-	},
+		path: '/account'
+	}
 ];
 
 export default function Navbar() {
@@ -40,7 +40,7 @@ export default function Navbar() {
 		window.addEventListener('scroll', () => setScrollPosition(window.scrollY));
 
 		return window.removeEventListener('scroll', () =>
-			setScrollPosition(window.scrollY),
+			setScrollPosition(window.scrollY)
 		);
 	}, []);
 
@@ -76,7 +76,7 @@ export default function Navbar() {
 							onClick={scrollToTop}
 							style={{
 								transitionDelay: index * 100 + (isOpen ? 300 : 100) + 'ms',
-								transform: `translateX(${!isDesktop && !isOpen ? 500 : 0}%)`,
+								transform: `translateX(${!isDesktop && !isOpen ? 500 : 0}%)`
 							}}
 						>
 							<NavLink to={link.path}>{link.title}</NavLink>

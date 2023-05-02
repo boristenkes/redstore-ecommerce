@@ -1,0 +1,8 @@
+.about {
+	img {
+		width: min(600px, 100%);
+		aspect-ratio: 12 / 9;
+		object-fit: cover;
+		margin-inline: auto;
+	}
+}

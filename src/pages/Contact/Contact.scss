@@ -1,0 +1,45 @@
+@use '../../scss/abstracts/' as *;
+
+.contact {
+	h1 {
+		margin-bottom: 2rem;
+	}
+
+	form {
+		width: 100%;
+		display: grid;
+		gap: 1rem;
+	}
+
+	div {
+		@include flex();
+		gap: 1rem;
+	}
+
+	input,
+	textarea {
+		flex: 1;
+		padding: 1rem;
+		border-radius: 0.25rem;
+		outline: none;
+		border: none;
+		font: {
+			size: 1.1rem;
+			family: var(--ff-body);
+		}
+		background-color: var(--clr-neutral-100);
+		color: var(--clr-neutral-900);
+		width: min(1300px, 100%);
+	}
+
+	textarea {
+		min-height: 200px;
+		max-height: 500px;
+		resize: vertical;
+	}
+
+	button {
+		margin-top: 2rem;
+		margin-left: auto;
+	}
+}

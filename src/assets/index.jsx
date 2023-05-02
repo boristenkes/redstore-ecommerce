@@ -16,19 +16,20 @@ export { default as Logo } from './Logo';
 
 export { default as exclusive } from './exclusive.webp';
 export { default as hero } from './hero.webp';
+export { default as meeting } from './meeting.webp';
 export { default as playStore } from './play-store.webp';
 export { default as appStore } from './app-store.webp';
 
 export const categoryImages = {
 	category1: category1,
 	category2: category2,
-	category3: category3,
+	category3: category3
 };
 
 export const users = {
 	sean: sean,
 	mike: mike,
-	mabel: mabel,
+	mabel: mabel
 };
 
 export const logos = {
@@ -36,5 +37,5 @@ export const logos = {
 	oppo: oppo,
 	coke: coke,
 	paypal: paypal,
-	philips: philips,
+	philips: philips
 };
