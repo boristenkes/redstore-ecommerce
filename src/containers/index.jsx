@@ -1,5 +1,4 @@
 export { default as Brands } from './Brands/Brands';
-export { default as Cart } from './Cart/Cart';
 export { default as Categories } from './Categories/Categories';
 export { default as CTA } from './CTA/CTA';
 export { default as FeaturedProducts } from './FeaturedProducts/FeaturedProducts';

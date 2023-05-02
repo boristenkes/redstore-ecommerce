@@ -5,7 +5,7 @@ import {
 	Contact,
 	Home,
 	ProductReview,
-	ProductsPage,
+	ProductsPage
 } from './pages';
 import { Navbar, Footer } from './layouts';
 import { Route, Routes } from 'react-router-dom';
