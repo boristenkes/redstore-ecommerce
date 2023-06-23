@@ -16,7 +16,7 @@ On the "Products" page, you can view all products listed and sort them by name, 
 
 The products are separated into pages, with a maximum of 12 products per page. When there are more than 12 products, a new page is added automatically to improve the user experience by reducing the amount of scrolling required.
 
-Each product is a link to a details page where you can see its category, name, brand, price, description, related products (_products with a similar name or from the same brand_), and more product images (if available). You can navigate through the product images by clicking the small images below the main image.<br />
+Each product is a link to a details page where you can see its category, name, brand, price, description, related products (_products with a similar name or from the same brand_), and more product images (if available). You can navigate through the product images by clicking the small images below the main image. The navigation bar can accommodate up to four images, and if there are more than four, a scrollbar will appear.<br />
 By default, 4 related products are shown, and clicking the "View More" button will reveal 4 additional related products. The "View More" button is disabled when there are no more related products to show.
 
 Updating the product quantity will automatically adjust the price based on the selected quantity.
