@@ -3,6 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 import { hero } from '../../assets';
 import { Button } from '../../components';
 import { Link } from 'react-router-dom';
+import { scrollToTop } from '../../utils';
 
 export default function Header() {
 	const isDesktop = useMediaQuery({ query: '(min-width: 640px)' });
@@ -19,9 +20,7 @@ export default function Header() {
 						Consistent hard work gains success. Greatness will come.
 					</p>
 					<Link to='/products'>
-						<Button onClick={() => window.scrollTo({ top: 0 })}>
-							Explore Now &#10095;
-						</Button>
+						<Button onClick={scrollToTop}>Explore Now &#10095;</Button>
 					</Link>
 				</div>
 				<div>

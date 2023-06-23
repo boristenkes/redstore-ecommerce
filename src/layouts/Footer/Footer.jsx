@@ -2,6 +2,7 @@ import './Footer.scss';
 import { Logo, playStore, appStore } from '../../assets';
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
+import { scrollToTop } from '../../utils';
 
 const usefulLinks = [
 	{
@@ -85,7 +86,7 @@ export default function Footer() {
 					<Link
 						aria-label='Home'
 						to='/'
-						onClick={() => window.scrollTo({ top: 0 })}
+						onClick={scrollToTop}
 					>
 						<Logo
 							className='footer-logo'

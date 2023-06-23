@@ -6,6 +6,7 @@ import { Spin as Hamburger } from 'hamburger-react';
 import { ReactComponent as Cart } from '../../assets/cart.svg';
 import { useContext, useEffect, useState } from 'react';
 import DataContext from '../../context/DataContext';
+import { scrollToTop } from '../../utils';
 
 const navLinks = [
 	{
@@ -44,11 +45,6 @@ export default function Navbar() {
 		);
 	}, []);
 
-	const scrollToTop = () => {
-		setOpen(false);
-		window.scrollTo({ top: 0 });
-	};
-
 	return (
 		<header
 			className={`navbar | container ${scrollPosition > 75 ? 'with-bg' : ''}`}
@@ -57,7 +53,10 @@ export default function Navbar() {
 				<Link
 					to='/'
 					aria-label='Home'
-					onClick={scrollToTop}
+					onClick={() => {
+						setOpen(false);
+						scrollToTop();
+					}}
 				>
 					<Logo />
 				</Link>

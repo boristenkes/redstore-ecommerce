@@ -27,7 +27,9 @@ export default function CartItem({ item, itemIndex }) {
 		setItemTotal(item.price * item.quantity);
 
 		const updatedCartItems = cartItems.map(cartItem =>
-			cartItem.id === item.id ? { ...cartItem, quantity: quantity } : cartItem
+			cartItem.id === item.id && cartItem.size === item.size
+				? { ...cartItem, quantity: quantity }
+				: cartItem
 		);
 		setCartItems(updatedCartItems);
 	}, [quantity]);

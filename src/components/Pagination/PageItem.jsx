@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { scrollToTop } from '../../utils';
 import ProductContext from '../../context/DataContext';
 
 export default function PageItem({
@@ -18,7 +19,7 @@ export default function PageItem({
 				className={`${isActive ? 'active' : ''}`}
 				onClick={() => {
 					setCurrentPage(to);
-					window.scrollTo({ top: 0 });
+					scrollToTop();
 				}}
 				disabled={isDisabled}
 			>

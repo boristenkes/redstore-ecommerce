@@ -31,7 +31,9 @@ export default function ProductImages({ images }) {
 					style={{
 						boxShadow: 'var(--album-shadow)',
 						borderRadius: '.25rem',
-						backgroundColor: 'var(--clr-neutral-100)'
+						backgroundColor: 'var(--clr-neutral-100)',
+						height: '600px',
+						objectFit: 'contain'
 					}}
 				/>
 			)}

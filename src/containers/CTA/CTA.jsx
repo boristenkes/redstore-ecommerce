@@ -2,10 +2,11 @@ import './CTA.scss';
 import { Button, Loader } from '../../components';
 import { Link } from 'react-router-dom';
 import { useFetch } from '../../hooks';
+import { scrollToTop } from '../../utils';
 
 export default function CTA() {
 	const [exclusiveProduct, fetchError, isLoading] = useFetch(
-		'/products?exclusive=true',
+		'/products?exclusive=true'
 	);
 
 	return (
@@ -27,9 +28,7 @@ export default function CTA() {
 							{exclusiveProduct[0].description}
 						</p>
 						<Link to={`/product/${exclusiveProduct[0]._id}`}>
-							<Button onClick={() => window.scrollTo({ top: 0 })}>
-								Buy Now &#10095;
-							</Button>
+							<Button onClick={scrollToTop}>Buy Now &#10095;</Button>
 						</Link>
 					</div>
 				</div>

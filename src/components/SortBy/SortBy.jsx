@@ -1,6 +1,8 @@
-import { useContext } from 'react';
+import { useContext, Fragment } from 'react';
 import DataContext from '../../context/DataContext';
 import './SortBy.scss';
+
+const sortOptions = ['Name', 'Rating', 'Price', 'Date'];
 
 export default function SortBy() {
 	const { setSort } = useContext(DataContext);
@@ -18,54 +20,22 @@ export default function SortBy() {
 			>
 				Sort By
 			</option>
-			<option
-				value='name-asc'
-				aria-label='Name - ascending'
-			>
-				Name &#8599;
-			</option>
-			<option
-				value='name-desc'
-				aria-label='Name - descending'
-			>
-				Name &#8600;
-			</option>
-			<option
-				value='rating-asc'
-				aria-label='Rating - ascending'
-			>
-				Rating &#8599;
-			</option>
-			<option
-				value='rating-desc'
-				aria-label='Rating - descending'
-			>
-				Rating &#8600;
-			</option>
-			<option
-				value='price-asc'
-				aria-label='Price - ascending'
-			>
-				Price &#8599;
-			</option>
-			<option
-				value='price-desc'
-				aria-label='Price - descending'
-			>
-				Price &#8600;
-			</option>
-			<option
-				value='date-asc'
-				aria-label='Date - ascending'
-			>
-				Date &#8599;
-			</option>
-			<option
-				value='date-desc'
-				aria-label='Date - descending'
-			>
-				Date &#8600;
-			</option>
+			{sortOptions.map((option, index) => (
+				<Fragment key={`${option}-${index}`}>
+					<option
+						value={option.toLowerCase() + '-asc'}
+						aria-label={option + ' - ascending'}
+					>
+						{option} &#8599;
+					</option>
+					<option
+						value={option.toLowerCase() + '-desc'}
+						aria-label={option + ' - descending'}
+					>
+						{option} &#8600;
+					</option>
+				</Fragment>
+			))}
 		</select>
 	);
 }

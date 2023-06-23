@@ -2,6 +2,7 @@ import './Product.scss';
 import { Link } from 'react-router-dom';
 import { useStars } from '../../hooks';
 import { useContext } from 'react';
+import { scrollToTop } from '../../utils';
 import DataContext from '../../context/DataContext';
 
 export default function Product({ product }) {
@@ -12,7 +13,7 @@ export default function Product({ product }) {
 		<article className='product'>
 			<Link
 				to={`/product/${product._id}`}
-				onClick={() => window.scrollTo({ top: 0 })}
+				onClick={scrollToTop}
 			>
 				<img
 					className='product-image'
