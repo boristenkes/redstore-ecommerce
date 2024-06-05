@@ -1,7 +1,7 @@
-import './About.scss';
+import './About.scss'
 
-import { meeting } from '../../assets';
-import { Button } from '../../components';
+import { meeting } from '../../assets'
+import { Button } from '../../components'
 
 export default function About() {
 	return (
@@ -44,7 +44,9 @@ export default function About() {
 			<img
 				src={meeting}
 				alt='Redstore team meeting'
+				width={600}
+				height={401}
 			/>
 		</main>
-	);
+	)
 }

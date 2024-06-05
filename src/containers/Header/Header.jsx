@@ -1,12 +1,12 @@
-import './Header.scss';
-import { useMediaQuery } from 'react-responsive';
-import { hero } from '../../assets';
-import { Button } from '../../components';
-import { Link } from 'react-router-dom';
-import { scrollToTop } from '../../utils';
+import { useMediaQuery } from 'react-responsive'
+import { Link } from 'react-router-dom'
+import { hero } from '../../assets'
+import { Button } from '../../components'
+import { scrollToTop } from '../../utils'
+import './Header.scss'
 
 export default function Header() {
-	const isDesktop = useMediaQuery({ query: '(min-width: 640px)' });
+	const isDesktop = useMediaQuery({ query: '(min-width: 640px)' })
 
 	return (
 		<header className='header'>
@@ -27,11 +27,11 @@ export default function Header() {
 					<img
 						src={hero}
 						alt='2 footballers cheering'
-						width={500}
-						height={500}
+						width={642}
+						height={554}
 					/>
 				</div>
 			</div>
 		</header>
-	);
+	)
 }
