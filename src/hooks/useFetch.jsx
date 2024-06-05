@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const apiUrl = import.meta.env.VITE_API_URL
+const apiUrl = 'https://6407a8c02f01352a8a810fd3.mockapi.io/'
 
 export default function useFetch(endpoint) {
 	const [data, setData] = useState([])
