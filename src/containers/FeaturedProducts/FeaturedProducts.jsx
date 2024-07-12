@@ -4,7 +4,7 @@ import { useFetch } from '../../hooks';
 
 export default function FeaturedProducts() {
 	const [featuredProducts, fetchError, isLoading] = useFetch(
-		'/products?featured=true',
+		'/products?featured=true&page=1&limit=4'
 	);
 
 	return (
